@@ -3,7 +3,35 @@ import React, { useState } from 'react'
 import { Button } from './ui/button'
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import CustomCard from './customcard';
 
+
+const cards = [
+    {
+      category: 'QUALITY CONTROL',
+      date: 'JULY 26, 2025',
+      title: 'AI grades scrap with precision',
+      description: 'Automated grading boosts accuracy and trust for global scrap trade.',
+      imageSrc: '/images/qualitycontrol.png',
+      imageAlt: 'qc'
+    },
+    {
+      category: 'DOCUMENT PARSING',
+      date: 'JULY 26, 2025',
+      title: 'Compliance, automated and assured',
+      description: 'AI parsing eliminates manual errors and keeps you audit-ready.',
+      imageSrc: '/images/documentparsing.png',
+      imageAlt: 'qc'
+    },
+    {
+      category: 'FORENSICS',
+      date: 'JULY 26, 2025',
+      title: 'Spot image fraud before it costs you',
+      description: 'Forensic analysis exposes tampering and prevents costly disputes.',
+      imageSrc: '/images/forensics.png',
+      imageAlt: 'qc'
+    }
+  ];
 const Tradeintelligence = () => {
     const [step, setStep]= useState('1')
     return (
@@ -45,64 +73,10 @@ const Tradeintelligence = () => {
                       >Forensics </Button>
 
              </div>
-             <div className='flex flex-wrap md:flex-row flex-col items-center gap-6'>
-                  <div className='flex flex-col max-w-[352px] rounded-[10px]'>
-                    <div className='p-[1px] flex justify-center'>
-                        <Image src={'/images/qualitycontrol.png'}  width={352} height={299} alt='qc' className='rounded-t-[10px] '/>
-                        </div> 
-                     <div className='flex flex-col gap-4 py-6 px-4 border-[2px] rounded-b-[10px]'>
-                         <div className='flex justify-between items-center'>
-                            <p className='text-[#808080] '>QUALITY CONTROL</p>
-                            <p>JULY 26, 2025</p>
-                         </div>
-                         <div className='flex flex-col gap-1'>
-                            <p className='font-[700] leading-[150%]'>AI grades scrap with precision</p>
-                            <p className='text-[#808080]'>Automated grading boosts accuracy and trust for global scrap trade.</p>
-                         </div>
-                         <Button varient='outline' className='bg-inherit  text-black  border-[2px] cursor-pointer  hover:bg-inherit '>
-                              Learn more <ArrowRight/>
-                         </Button>
-                     </div>
-                  </div>
-                   <div className='flex flex-col max-w-[352px] rounded-[10px]'>
-                    <div className='p-[1px] flex justify-center'>
-                        <Image src={'/images/documentparsing.png'}  width={352} height={299} alt='qc' className='rounded-t-[10px] '/>
-                        </div> 
-                     <div className='flex flex-col gap-4 py-6 px-4 border-[2px] rounded-b-[10px]'>
-                         <div className='flex justify-between items-center'>
-                            <p className='text-[#808080] '>DOCUMENT PARSING</p>
-                            <p>JULY 26, 2025</p>
-                         </div>
-                         <div className='flex flex-col gap-1'>
-                            <p className='font-[700] leading-[150%]'>Compliance, automated and assured</p>
-                            <p className='text-[#808080]'>AI parsing eliminates manual errors and keeps you audit-ready.</p>
-                         </div>
-                         <Button varient='outline' className='bg-inherit  text-black  border-[2px] cursor-pointer  hover:bg-inherit '>
-                              Learn more <ArrowRight/>
-                         </Button>
-                     </div>
-                  </div>
-                   <div className='flex flex-col max-w-[352px] rounded-[10px]'>
-                    <div className='p-[1px] flex justify-center'>
-                        <Image src={'/images/forensics.png'}  width={352} height={299} alt='qc' className='rounded-t-[10px] '/>
-                        </div> 
-                     <div className='flex flex-col gap-4 py-6 px-4 border-[2px] rounded-b-[10px]'>
-                         <div className='flex justify-between items-center'>
-                            <p className='text-[#808080] '>FORENSICS</p>
-                            <p>JULY 26, 2025</p>
-                         </div>
-                         <div className='flex flex-col gap-1'>
-                            <p className='font-[700] leading-[150%]'>Spot image fraud before it costs you</p>
-                            <p className='text-[#808080]'>Forensic analysis exposes tampering and prevents costly disputes.</p>
-                         </div>
-                         <Button varient='outline' className='bg-inherit  text-black  border-[2px] cursor-pointer  hover:bg-inherit '>
-                              Learn more <ArrowRight/>
-                         </Button>
-                     </div>
-                  </div>
-                
-             </div>
-        </div>
+           
+              <CustomCard cards={cards} />
+    </div>
+       
     )
 }
 

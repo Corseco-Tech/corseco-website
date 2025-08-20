@@ -5,9 +5,7 @@ import React from 'react'
 const Contactus = () => {
   return (
       <div className='flex flex-col gap-10  bg-[#F5F5F5]'>
-        <div className="sticky top-5 z-50 lg:px-20 md:px-10 px-5 ">
-        <Header />
-       </div>
+       
         <div className=' px-5 md:px-10 lg:px-20 xl:px-30 pt-5 md:pb-34 pb-10 gap-10 flex flex-col bg-white'>
             <div className='h-[500px] '>
                    <div  className="bg-[url('/images/contactUsimage.jpg')] bg-cover object-cover bg-center bg-no-repeat  h-full rounded-[40px]">
@@ -39,7 +37,7 @@ const Contactus = () => {
         </div> 
         
 
-       <Footer/>
+      
       </div> 
   )
 }

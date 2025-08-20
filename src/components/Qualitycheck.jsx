@@ -7,7 +7,7 @@ const Qualitycheck = () => {
     <div className='flex flex-col  lg:px-[120px] md:px-15 px-5  py-[47px] gap-10'>
         <div className='flex flex-col gap-2 text-center '> 
             <p className='font-bold md:text-[40px] text-[24px] leading-[120%]'>Verified quality. Trusted trade. Every time.</p>
-            <p className='md:text-[24px] text-base leading-[150%] '>AI powered QC, forensic image analysis, and document verification - delivering trust and transparency for global trade.</p>
+            <p className='md:text-[24px] max-w-[820px] mx-auto text-base leading-[150%] '>AI powered QC, forensic image analysis, and document verification - delivering trust and transparency for global trade.</p>
         </div>
         <div className='flex  justify-center flex-wrap gap-6'>
             <Card className={'w-[344px]'}> 

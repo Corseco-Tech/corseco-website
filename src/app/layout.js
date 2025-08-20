@@ -3,6 +3,7 @@ import "./globals.css";
 import { StoreProvider } from "./storeprovider";
 import { Archivo } from 'next/font/google'
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,7 +31,9 @@ export default function RootLayout({ children }) {
         className={`${archivo.className}   antialiased`}
       >
          <StoreProvider>
-          {children}
+      <Header />
+      {children}
+      <Footer />
           </StoreProvider>
       </body>
     </html>
