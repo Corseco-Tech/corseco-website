@@ -33,7 +33,7 @@ const FAQs = () => {
   };
 
   return (
-    <div className="lg:px-30 md:px-15 px-5 md:py-18 py-10">
+    <div className="lg:px-30 md:px-15 px-5 md:py-18 py-10 bg-white">
       <div className=" ">
         <p className="font-bold md:text-[40px] text-[24px] leading-[120%] mb-6">Frequently Asked Questions</p>
 

@@ -9,9 +9,10 @@ import Transformshippingexperiance from "@/components/transformshippingexperianc
 import Image from "next/image";
 
 export default function Home() {
+  
   return (
-    <div className="flex flex-col   bg-transparent">
-      <div className="xl:px-30  md:px-10 px-5  mt-12 pt-5 md:pb-34 pb-10 flex flex-col bg-white  ">
+    <div className="flex flex-col -mt-28   bg-[#F5F5F5]">
+      <div className="xl:px-30  md:px-10 px-5  mt-40 pt-5 md:pb-34 pb-10 flex flex-col  ">
         <div className="flex flex-col  gap-[34px]">
          
           <div className="flex flex-col gap-6">
@@ -24,17 +25,19 @@ export default function Home() {
               </p>
             </div>
             <div className="mx-auto">
-              <Image src={'/images/ship.png'} alt="video " height={460} width={1200} />
-              {/* <object className='w-full rounded-[24px]' > 
-    <param name="movie" value="https://www.youtube.com/embed/Ez8F0nW6S-w?html5=1&rel=0&hl=en_US&version=3"/>
-    <param name="allowFullScreen" value="true"/>
-    <param name="allowscriptaccess" value="always"/>
-    <embed width="640" height="360" 
-           src="https://www.youtube.com/embed/Ez8F0nW6S-w?html5=1&rel=0&hl=en_US&version=3" 
-           type="text/html" 
-           allowscriptaccess="always" 
-           allowfullscreen="true"/>
-</object> */}
+              {/* <Image src={'/images/ship.png'} alt="video " height={460} width={1200} /> */}
+              <div className="mx-auto lg:w-[800px] md:w-[700px] sm:w-[500px]  ">
+  <div className="aspect-video rounded-[24px] overflow-hidden">
+    <iframe
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/KSQMGyjN5DI"
+      title="YouTube video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
 
             
             </div>
@@ -63,7 +66,7 @@ export default function Home() {
        </div>
        <Descriptions/>
        <ShipmentVerification/>
-         <div className="lg:px-30 md:px-15 px-5 md:py-20 py-10  flex flex-col gap-10 ">
+         <div className="lg:px-30 md:px-15 px-5 md:py-20 py-10  bg-white flex flex-col gap-10 ">
             <div className="flex flex-col lg:max-w-2/3 max-w-full gap-4 ">
               <p className="md:text-[40px] text-[24px]  font-[700] leading-[120%]">Trusted by industry leaders</p>
               <p className="md:text-[24px] text-base text-[#808080]   leading-[150%]">See how businesses use our platform to secure shipments and eliminate uncertainty in global trade.</p>

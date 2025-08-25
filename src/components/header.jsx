@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -10,8 +10,9 @@ const Header = () => {
   const [solutionsOpen, setSolutionsOpen] = useState(false)
   const [industriesOpen, setIndustriesOpen] = useState(false)
   const [supportOpen, setSupportOpen] = useState(false)
-  
+   const [loading, setLoading] = useState(false)  
   const router = useRouter()
+  const headerRef = useRef(null)
   
   // Function to close all dropdowns
   const closeAllDropdowns = () => {
@@ -43,6 +44,22 @@ const Header = () => {
         break
     }
   }
+
+  // Close dropdowns when clicking outside the header area
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        closeAllDropdowns()
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('touchstart', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
+  }, [])
 
   // Custom dropdown component for Solutions
   const SolutionsDropdown = () => (
@@ -279,7 +296,7 @@ const Header = () => {
       {industriesOpen && (
         <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-[300px]">
           <div className="p-4">
-            <Link href="/industries/scrap-metals" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+            <Link href="#" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path d="M15.2459 11.8879L13.0875 13.1347L12.8218 12.9808V13.2887L10.6633 14.5324L0.761415 8.77849V8.31963L1.6399 7.81246L1.63688 7.17246L0.755371 6.65925V6.20038L2.14706 5.39737L1.96594 5.2917L1.96292 4.83585L2.84442 4.32566L2.84142 3.68566L1.9599 3.17246L1.95687 2.71359L4.11537 1.4668L14.0173 7.22378L14.0203 7.68265L13.2233 8.14151L15.2369 9.30981L15.2399 9.76868L14.3584 10.2759L14.3614 10.9189L15.2429 11.4321L15.2459 11.8879Z" fill="#1D2943"/>
@@ -313,7 +330,7 @@ const Header = () => {
               </div>
             </Link>
 
-            <Link href="/industries/furniture" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+            <Link href="#" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <g clip-path="url(#clip0_1_231)">
@@ -379,7 +396,7 @@ const Header = () => {
               </div>
             </Link>
 
-            <Link href="/industries/construction" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+            <Link href="#" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <g clip-path="url(#clip0_1_287)">
@@ -607,8 +624,8 @@ const Header = () => {
   )
   
   return (
-    <div className='xl:px-30  md:px-10 mt-5 sticky top-5 z-50'>
-    <div className='flex justify-between items-center gap-5 w-full p-4 bg-white rounded-[24px] text-[#1A1A1A] border border-[2px] '>
+    <div ref={headerRef} className='xl:px-30  md:px-10 mt-5 sticky top-5 z-50'>
+    <div className='flex justify-between items-center gap-5 w-full   p-4 bg-white rounded-[16px] text-[#1A1A1A] border-[#F5F5F5] border-[2px] '>
       <div onClick={() => router.push('/')} className='flex items-center gap-2'>
         <Image src={'/logo/corseco.png'} height={43} width={43} alt='logo' />
         <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[150%]'>Corseco.tech</p>
@@ -635,11 +652,25 @@ const Header = () => {
         <Contactusdropdown />
       </div>
        
-      <div className=' items-center justify-center gap-2 p-2 border border-[#808080] hidden lg:flex rounded-[8px] w-[266px] bg-[#F5F5F5]'>
+      <div onClick={()=>{
+          setLoading(true)
+        router.push('/booking')
+        setLoading(false)   
+      }} 
+        className=' items-center justify-center gap-2 p-2 border border-[#808080] hidden lg:flex rounded-[8px] w-[266px] h-[48px] bg-[#F5F5F5]'>
         <p className='font-[700] text-[24px]  leading-[150%] text-[#1A1A1A]'>Book Demo</p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-          <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="#1A1A1A" />
-        </svg>
+        {
+          loading ? (
+            <div className='animate-spin rounded-full h-6 w-6 border-b-2 border-gray-900'></div>
+          ):(
+            (
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+           <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="#1A1A1A" />
+         </svg>
+           )
+          )
+        }
+       
       </div>
       
       <div className="lg:hidden">
@@ -679,7 +710,7 @@ const Header = () => {
                     </button>
                     {solutionsOpen && (
                       <div className="space-y-2 ml-4">
-                        <Link href="/solutions/mettrade-ai" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
+                        <Link href="/mettrade-ai" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           Mettrade AI
                         </Link>
                         <Link href="/forensic-analysis" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
@@ -688,9 +719,9 @@ const Header = () => {
                         <Link href="/location-proof" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           Location proof
                         </Link>
-                        <Link href="/shelf-iq" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
+                        {/* <Link href="/shelf-iq" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           ShelfIQ
-                        </Link>
+                        </Link> */}
                         <Link href="/trust-passport" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           Trust Passport
                         </Link>
@@ -727,13 +758,13 @@ const Header = () => {
                     </button>
                     {industriesOpen && (
                       <div className="space-y-2 ml-4">
-                        <Link href="/industries/scrap-metals" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
+                        <Link href="#" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           Scrap & Metals
                         </Link>
-                        <Link href="/industries/furniture" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
+                        <Link href="#" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           Furniture
                         </Link>
-                        <Link href="/industries/construction" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
+                        <Link href="#" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           Construction
                         </Link>
                       </div>

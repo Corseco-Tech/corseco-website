@@ -3,7 +3,7 @@ import React from 'react'
 
 const Descriptions = () => {
   return (
-    <div className='flex  lg:px-30 md:px-15 px-5 md:py-17 py-10 flex-col gap-6'>
+    <div className='flex  lg:px-30 md:px-15 px-5 md:py-17 py-10 flex-col gap-6 bg-white'>
       <div className='sm:p-10 p-5 flex lg:flex-row flex-col items-center gap-6 bg-[#F0F0F0] md:rounded-[40px] rounded-[20px]'>
           <div className=' flex flex-col lg:w-1/2 order-2 lg:order-1 gap-2 '>
             <p className='font-bold md:text-[40px] text-[16px] text-center md:text-left leading-[120%]'>Quality verification - Instant QC, zero guesswork</p>

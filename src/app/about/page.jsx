@@ -9,12 +9,12 @@ const data=[
         designation:"CFO",
         image:"/images/sachin.png"
     },
-    {
-        id:2,
-        name:"Saneesh Cherian",
-        designation:"CMO",
-        image:"/images/saneesh.png"
-    },
+    // {
+    //     id:2,
+    //     name:"Saneesh Cherian",
+    //     designation:"CMO",
+    //     image:"/images/saneesh.png"
+    // },
     {
         id:3,
         name:" Jorlin Rafarero",
@@ -42,12 +42,12 @@ const boardofadvisors=[
         designation:"Founder Streetwall India-Acquired by blue Water works ",
         image:"/images/jitendra.png"
     },
-    {
-        id:3,
-        name:"Bahubali Shete",
-        designation:"CEO, Tiny chef",
-        image:"/images/bahubali.png"
-    },
+    // {
+    //     id:3,
+    //     name:"Bahubali Shete",
+    //     designation:"CEO, Tiny chef",
+    //     image:"/images/bahubali.png"
+    // },
     {
         id:4,
         name:" Adarsh jain",

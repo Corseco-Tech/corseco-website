@@ -56,8 +56,18 @@ const cards = [
       }
   ];
 const Blog = () => {
-    const [step, setStep]= useState(1)
+    const [step, setStep]= useState('All')
     const [currentPage, setCurrentPage]= useState(1)
+    
+    const stepToCategoryMap = {
+        'Quality Control': 'QUALITY CONTROL',
+        'AI QC': 'QUALITY CONTROL',
+        'Document Parsing': 'DOCUMENT PARSING',
+        'Compliance': 'DOCUMENT PARSING',
+        'Forensics': 'FORENSICS'
+    }
+
+    const filteredCards = step === 'All' ? cards : cards.filter(card => card.category === stepToCategoryMap[step])
   return (
     <div className='flex flex-col gap-20 xl:px-30  md:px-10 px-5 mt-5 my-20 '>
          <div className='flex flex-col gap-4'>
@@ -65,27 +75,27 @@ const Blog = () => {
             <div className='flex items-center flex-wrap justify-between md:gap-10 gap-5'>
                <div className='flex flex-wrap  gap-2 '> 
                 <Button
-                 onClick={()=>setStep(1)}
-                className={`${step === 1 ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none  '} cursor-pointer font-bold`} >All </Button>
+                 onClick={()=>setStep('All')}
+                className={`${step === 'All' ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none  '} cursor-pointer font-bold`} >All </Button>
                   <Button
-                  onClick={()=>setStep(2)}
-                className={`${step === 2 ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none '} cursor-pointer font-bold`}
+                  onClick={()=>setStep('Quality Control')}
+                className={`${step === 'Quality Control' ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none '} cursor-pointer font-bold`}
                   >Quality Control </Button>
                     <Button
-                   onClick={()=>setStep(3)}
-                className={`${step === 3 ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none  '} cursor-pointer font-bold`}
+                   onClick={()=>setStep('AI QC')}
+                className={`${step === 'AI QC' ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none  '} cursor-pointer font-bold`}
                     >AI QC </Button>
                       <Button
-                     onClick={()=>setStep(4)} 
-                className={`${step === 4 ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none '} cursor-pointer font-bold`}
+                     onClick={()=>setStep('Document Parsing')} 
+                className={`${step === 'Document Parsing' ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none '} cursor-pointer font-bold`}
                       >Document Parsing </Button>
                       <Button
-                       onClick={()=>setStep(5)}
-                className={`${step === 5 ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none '} cursor-pointer font-bold`}
+                       onClick={()=>setStep('Compliance')}
+                className={`${step === 'Compliance' ? ' text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none '} cursor-pointer font-bold`}
                       >Compliance </Button>
                        <Button
-                       onClick={()=>setStep(6)}
-                className={`${step === 6 ? '  text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none '} cursor-pointer font-bold`}
+                       onClick={()=>setStep('Forensics')}
+                className={`${step === 'Forensics' ? '  text-black border hover:bg-white bg-white border-gray-500 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]' : 'bg-white hover:bg-white text-black border border-white shadow-none '} cursor-pointer font-bold`}
                       >Forensics </Button>
 
                 </div>
@@ -99,7 +109,7 @@ const Blog = () => {
                  </div>
              </div>
          </div>
-        <CustomCard cards={cards}/>
+        <CustomCard cards={filteredCards}/>
          <div className='flex items-center justify-center gap-2'>
           <ChevronLeft onClick={()=>setCurrentPage(currentPage - 1)}  className={`${currentPage === 1 ? 'hidden' : ''}`}/>
            <p className={`${currentPage === 1 ? 'text-black p-2 rounded-full border h-10 w-10 flex items-center justify-center' : 'text-gray-500 border border-white h-10 w-10 flex items-center justify-center'}`}>1</p>

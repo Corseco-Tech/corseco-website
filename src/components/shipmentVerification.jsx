@@ -57,7 +57,7 @@ const ShipmentVerification = () => {
   };
   return (
     <div className='lg:px-30 md:px-15 px-5 md:py-20 py-10'>     
-          <div className='sm:p-10 p-5 flex  md:flex-row flex-col items-center gap-6 bg-[#F0F0F0] md:rounded-[40px] rounded-[20px]'>
+          <div className='sm:p-10 p-5 flex  md:flex-row flex-col items-center gap-6  md:rounded-[40px] rounded-[20px]'>
                 <div className=' flex flex-col md:w-1/2 w-full order-2 md:order-1 gap-2 '>
                   <p className='font-bold md:text-[40px] text-[24px] text-center md:text-left leading-[120%]'>Verify every shipment. Instantly.</p>
                     <div className="flex flex-col gap-6">
