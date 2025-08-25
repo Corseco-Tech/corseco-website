@@ -53,7 +53,8 @@ const Booking = () => {
             <InlineWidget 
               url="https://calendly.com/vivek-corseco/30min?hide_event_type_details=1&hide_gdpr_banner=1"
               styles={{
-                height: '700px'
+                height: '500px',
+                width: '100%'
               }}
               prefill={{
                 name: '',
@@ -64,6 +65,10 @@ const Booking = () => {
                 utmSource: 'Website',
                 utmMedium: 'Booking Form'
               }}
+               pageSettings={{
+    resize: true,
+
+  }}
             />
           </div>
         </div>

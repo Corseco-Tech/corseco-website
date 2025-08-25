@@ -25,8 +25,8 @@ export default function Home() {
               </p>
             </div>
             <div className="mx-auto">
-              {/* <Image src={'/images/ship.png'} alt="video " height={460} width={1200} /> */}
-              <div className="mx-auto lg:w-[800px] md:w-[700px] sm:w-[500px]  ">
+              <Image src={'/images/ship.png'} alt="video " height={460} width={1200} />
+              <div className=" hidden mx-auto lg:w-[800px] md:w-[700px] sm:w-[500px]  ">
   <div className="aspect-video rounded-[24px] overflow-hidden">
     <iframe
       className="w-full h-full"
@@ -38,9 +38,7 @@ export default function Home() {
   </div>
 </div>
 
-
-            
-            </div>
+ </div>
           </div>
         </div>
       </div>
@@ -71,7 +69,7 @@ export default function Home() {
               <p className="md:text-[40px] text-[24px]  font-[700] leading-[120%]">Trusted by industry leaders</p>
               <p className="md:text-[24px] text-base text-[#808080]   leading-[150%]">See how businesses use our platform to secure shipments and eliminate uncertainty in global trade.</p>
             </div>
-            <div className="flex flex-wrap md:flex-row justify-center gap-6 gap-y-5 flex-col ">
+            <div className="flex flex-wrap md:flex-row md:justify-center items-center  gap-6 gap-y-5 flex-col  ">
                <div className="flex flex-col sm:w-[336px] w-full gap-16 p-6 border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
                   <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
                   <div className="flex items-center gap-3">

@@ -2,6 +2,8 @@
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import { Button } from './ui/button';
+import { useRouter } from 'next/navigation';
 
 
 const faqData = [
@@ -49,9 +51,9 @@ const faqData = [
 ];
 
 const ShipmentVerification = () => {
-   
+    const router= useRouter()
     const [openIndex, setOpenIndex] = useState(null);
-
+    const [loading, setLoading]= useState(false)
   const toggleOpen = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -86,12 +88,26 @@ const ShipmentVerification = () => {
           )}
         </div>
       ))}
-      <div className='flex gap-2 items-center p-2 bg-white md:mx-0 mx-auto justify-center md:w-[282px] w-full border  border-[#808080]  rounded-[8px]'>
-        <p>Book Demo </p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-  <path d="M16.672 11.5002L11.308 6.13617L12.722 4.72217L20.5 12.5002L12.722 20.2782L11.308 18.8642L16.672 13.5002H4.5V11.5002H16.672Z" fill="#1A1A1A"/>
-</svg>
-      </div>
+        <Button onClick={()=>{
+          setLoading(true)
+        router.push('/booking')
+        setLoading(false)   
+      }} 
+        className=' items-center cursor-pointer justify-center gap-2 p-2 border border-[#808080] hidden lg:flex rounded-[8px] w-[266px] h-[48px] bg-[#F5F5F5]  hover:bg-gray-200'>
+        <p className='font-[700] text-[24px]  leading-[150%] text-[#1A1A1A]'>Book Demo</p>
+        {
+          loading ? (
+            <div className='animate-spin rounded-full h-6 w-6 border-b-2 border-gray-900'></div>
+          ):(
+            (
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+           <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="#1A1A1A" />
+         </svg>
+           )
+          )
+        }
+       
+      </Button>
     </div>
                 </div>
                 <div className='md:w-1/2 w-full order-1 md:order-2 flex justify-end'>

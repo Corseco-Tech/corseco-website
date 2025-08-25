@@ -3,7 +3,8 @@ import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { Button } from './ui/button';
 
 const Header = () => {
   const [openmenu, setOpenMenu] = useState(false)
@@ -13,18 +14,22 @@ const Header = () => {
    const [loading, setLoading] = useState(false)  
   const router = useRouter()
   const headerRef = useRef(null)
-  
+  const pathname = usePathname()
   // Function to close all dropdowns
   const closeAllDropdowns = () => {
     setSolutionsOpen(false)
     setIndustriesOpen(false)
     setSupportOpen(false)
   }
-
+  useEffect(() => {
+    closeAllDropdowns();
+  }, [pathname]);
   const closeMobileMenu = () => {
     setOpenMenu(false)
     closeAllDropdowns()
   }
+ 
+
 
   // Function to toggle specific dropdown and close others
   const toggleDropdown = (dropdownName) => {
@@ -60,12 +65,14 @@ const Header = () => {
       document.removeEventListener('touchstart', handleClickOutside)
     }
   }, [])
+   
+ const HideBookButton = pathname === '/booking'
 
   // Custom dropdown component for Solutions
   const SolutionsDropdown = () => (
-    <div className="relative">
+    <div className="relative cursor-pointer">
       <button 
-        className="flex items-center gap-1 hover:text-gray-600 transition-colors text-[#1A1A1A]"
+        className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors text-[#1A1A1A]"
         onClick={() => solutionsOpen ? closeAllDropdowns() : toggleDropdown('solutions')}
         onBlur={() => setTimeout(() => setSolutionsOpen(false), 150)}
       >
@@ -160,7 +167,7 @@ const Header = () => {
               </div>
             </Link>
 
-            <Link href="/shelf-iq" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+            {/* <Link href="/shelf-iq" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <g clip-path="url(#clip0_1_710)">
@@ -192,7 +199,7 @@ const Header = () => {
                 <p>ShelfIQ</p>
                 <p className='text-[#808080] text-[12px]'>Smarter shelves.</p>
               </div>
-            </Link>
+            </Link> */}
 
             <Link href="/trust-passport" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
@@ -251,10 +258,10 @@ const Header = () => {
   )
   
   const Contactusdropdown = () => (
-    <div className='relative'>
+    <div className='relative hidden'>
       <button 
         onClick={() => supportOpen ? closeAllDropdowns() : toggleDropdown('support')} 
-        className='flex items-center gap-1 hover:text-gray-600 transition-colors text-[#1A1A1A]'
+        className='flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors text-[#1A1A1A]'
         onBlur={() => setTimeout(() => setSolutionsOpen(false), 150)}
       >
        Support
@@ -281,9 +288,9 @@ const Header = () => {
 
   // Custom dropdown component for Industries
   const IndustriesDropdown = () => (
-    <div className="relative">
+    <div className="relative hidden">
       <button 
-        className="flex items-center gap-1 hover:text-gray-600 transition-colors text-[#1A1A1A]"
+        className="flex items-center gap-1 hover:text-gray-600 transition-colors cursor-pointer text-[#1A1A1A]"
         onClick={() => industriesOpen ? closeAllDropdowns() : toggleDropdown('industries')}
         onBlur={() => setTimeout(() => setIndustriesOpen(false), 150)}
       >
@@ -624,7 +631,7 @@ const Header = () => {
   )
   
   return (
-    <div ref={headerRef} className='xl:px-30  md:px-10 mt-5 sticky top-5 z-50'>
+    <div ref={headerRef} className='xl:px-30  md:px-10 mt-5 sticky top-5 z-50 '>
     <div className='flex justify-between items-center gap-5 w-full   p-4 bg-white rounded-[16px] text-[#1A1A1A] border-[#F5F5F5] border-[2px] '>
       <div onClick={() => router.push('/')} className='flex items-center gap-2'>
         <Image src={'/logo/corseco.png'} height={43} width={43} alt='logo' />
@@ -641,7 +648,7 @@ const Header = () => {
         </Link>
 
         {/* Blog - direct link */}
-        <Link href="/blog" className="cursor-pointer hover:text-gray-600 transition-colors" onClick={closeAllDropdowns}>
+        <Link href="/blog" className=" hidden cursor-pointer hover:text-gray-600 transition-colors" onClick={closeAllDropdowns}>
           Blog
         </Link>
 
@@ -650,14 +657,15 @@ const Header = () => {
 
         {/* Contact Us - direct link */}
         <Contactusdropdown />
-      </div>
        
-      <div onClick={()=>{
+      </div>
+       {
+        !HideBookButton ?(<Button onClick={()=>{
           setLoading(true)
         router.push('/booking')
         setLoading(false)   
       }} 
-        className=' items-center justify-center gap-2 p-2 border border-[#808080] hidden lg:flex rounded-[8px] w-[266px] h-[48px] bg-[#F5F5F5]'>
+        className=' items-center cursor-pointer justify-center gap-2 p-2 border border-[#808080] hidden lg:flex rounded-[8px] w-[266px] h-[48px] bg-[#F5F5F5]  hover:bg-gray-200'>
         <p className='font-[700] text-[24px]  leading-[150%] text-[#1A1A1A]'>Book Demo</p>
         {
           loading ? (
@@ -671,7 +679,9 @@ const Header = () => {
           )
         }
        
-      </div>
+      </Button>):(<div> </div>)
+       }
+      
       
       <div className="lg:hidden">
         <button onClick={() => setOpenMenu(!openmenu)} className='cursor-pointer'>
@@ -741,12 +751,12 @@ const Header = () => {
                   </Link>
   
                   {/* Blog */}
-                  <Link href="/blog" className="block text-lg font-semibold" onClick={closeMobileMenu}>
+                  {/* <Link href="/blog" className="block text-lg font-semibold" onClick={closeMobileMenu}>
                     Blog
-                  </Link>
+                  </Link> */}
   
                   {/* Industries Section */}
-                  <div>
+                  {/* <div>
                     <button 
                       className="flex items-center justify-between w-full text-left font-semibold text-lg mb-3"
                       onClick={() => toggleDropdown('industries')}
@@ -769,10 +779,10 @@ const Header = () => {
                         </Link>
                       </div>
                     )}
-                  </div>
+                  </div> */}
   
                   {/* Support Section */}
-                  <div>
+                  {/* <div>
                     <button 
                       className="flex items-center justify-between w-full text-left font-semibold text-lg mb-3"
                       onClick={() => toggleDropdown('support')}
@@ -792,19 +802,35 @@ const Header = () => {
                         </Link>
                       </div>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </div>
   
-              {/* Mobile Book Demo Button */}
-              <div className="p-4 border-t">
-                <div className='flex items-center justify-center gap-2 p-3 border border-[#808080] rounded-[8px] bg-[#F5F5F5]'>
-                  <p className='font-[700] text-[20px] leading-[150%] text-[#1A1A1A]'>Book Demo</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                    <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="#1A1A1A" />
-                  </svg>
-                </div>
-              </div>
+              {/* Mobile BookDemo Button */}
+          <div  className='px-5 '>
+            
+            
+             <Button onClick={()=>{
+          setLoading(true)
+        router.push('/booking')
+        setLoading(false)   
+      }} 
+        className=' items-center cursor-pointer justify-center gap-2 p-2 border border-[#808080]   w-full flex lg:hidden rounded-[8px] mb-2 h-[48px] bg-[#F5F5F5]  hover:bg-gray-200'>
+        <p className='font-[700] text-[24px]  leading-[150%] text-[#1A1A1A]'>Book Demo</p>
+        {
+          loading ? (
+            <div className='animate-spin rounded-full h-6 w-6 border-b-2 border-gray-900'></div>
+          ):(
+            (
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+           <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="#1A1A1A" />
+         </svg>
+           )
+          )
+        }
+       
+      </Button>
+      </div>  
             </div>
           </div>
         )}

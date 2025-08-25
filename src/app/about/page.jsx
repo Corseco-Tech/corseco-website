@@ -1,6 +1,7 @@
 import Transformshippingexperiance from '@/components/transformshippingexperiance'
 import Image from 'next/image'
 import React from 'react'
+import Marquee from 'react-fast-marquee'
 
 const data=[
     {
@@ -122,10 +123,10 @@ const AboutUs = () => {
                 </div> 
             </div>
        </div>
-       <div className='flex  items-center gap-10 overflow-x-auto scrollbar-hide '>
+       <div className='flex flex-wrap justify-center  items-center gap-10  '>
             {
                 data.map((item)=>(
-                    <div key={item.id} className='flex flex-col gap-6 justify-center  pb-7 border border-[#808080] rounded-[16px] shrink-0  max-w-[280px] md:max-w-full'>
+                    <div key={item.id} className='flex flex-col gap-6 justify-center  pb-7 border border-[#808080] rounded-[16px]   max-w-[280px] md:max-w-[344px]'>
                         <div className='w-full '><Image src={item.image} alt={item.name} width={384} height={384} responsive={true} className='rounded-[14px] w-full ' /></div>
                        <div className='flex flex-col gap-2 justify-center items-start px-5'>
                         <p className='text-[24px] font-bold leading-[150%]'>{item.name}</p>
@@ -138,10 +139,11 @@ const AboutUs = () => {
        </div>
        <div className='flex flex-col gap-10'>
         <p className='md:text-[40px] text-[28px] font-bold text-center leading-[120%]'>Board of Advisors</p>
-       <div className='flex  items-center gap-10 overflow-x-auto scrollbar-hide  pl-5 mr-5' >
-            {
+     <Marquee speed={50} gradient={false} pauseOnHover={true}>
+        <div className='flex  items-center gap-10 overflow-x-auto scrollbar-hide  pl-5 mr-5' >
+{        
                 boardofadvisors.map((item)=>(
-                    <div key={item.id} className='flex flex-col gap-6   pb-7 border border-[#808080] rounded-[16px] shrink-0  md:w-[398px] self-stretch animate-marquee w-[200px] '>
+                    <div key={item.id} className='flex flex-col gap-6   pb-7 border border-[#808080] rounded-[16px] shrink-0  md:w-[398px] self-stretch  w-[200px] '>
                         <div className='w-full   max-h-[140px] md:max-h-[287px] '><Image src={item.image} alt={item.name} width={398} height={398} responsive={true} className='rounded-[14px] w-full h-full  object-scale-down' /></div>
                        <div className='flex flex-col gap-2  items-start h-full px-5'>
                         <p className='md:text-[24px] text-base font-bold leading-[150%] '>{item.name}</p>
@@ -150,7 +152,8 @@ const AboutUs = () => {
                     </div>
                 ))
             }
-       </div>
+            </div>
+</Marquee>
        </div>
        <div className="lg:px-30 md:px-15 px-5 md:py-10 py-5">
        <Transformshippingexperiance/>
