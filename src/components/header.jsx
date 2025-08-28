@@ -258,7 +258,7 @@ const Header = () => {
   )
   
   const Contactusdropdown = () => (
-    <div className='relative hidden'>
+    <div className='relative '>
       <button 
         onClick={() => supportOpen ? closeAllDropdowns() : toggleDropdown('support')} 
         className='flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors text-[#1A1A1A]'
@@ -288,7 +288,7 @@ const Header = () => {
 
   // Custom dropdown component for Industries
   const IndustriesDropdown = () => (
-    <div className="relative hidden">
+    <div className="relative ">
       <button 
         className="flex items-center gap-1 hover:text-gray-600 transition-colors cursor-pointer text-[#1A1A1A]"
         onClick={() => industriesOpen ? closeAllDropdowns() : toggleDropdown('industries')}
@@ -303,7 +303,7 @@ const Header = () => {
       {industriesOpen && (
         <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-[300px]">
           <div className="p-4">
-            <Link href="#" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+            <Link href="scrapandmetals" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path d="M15.2459 11.8879L13.0875 13.1347L12.8218 12.9808V13.2887L10.6633 14.5324L0.761415 8.77849V8.31963L1.6399 7.81246L1.63688 7.17246L0.755371 6.65925V6.20038L2.14706 5.39737L1.96594 5.2917L1.96292 4.83585L2.84442 4.32566L2.84142 3.68566L1.9599 3.17246L1.95687 2.71359L4.11537 1.4668L14.0173 7.22378L14.0203 7.68265L13.2233 8.14151L15.2369 9.30981L15.2399 9.76868L14.3584 10.2759L14.3614 10.9189L15.2429 11.4321L15.2459 11.8879Z" fill="#1D2943"/>
@@ -337,7 +337,7 @@ const Header = () => {
               </div>
             </Link>
 
-            <Link href="#" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+            <Link href="furniture" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <g clip-path="url(#clip0_1_231)">
@@ -403,7 +403,7 @@ const Header = () => {
               </div>
             </Link>
 
-            <Link href="#" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+            <Link href="construction" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <g clip-path="url(#clip0_1_287)">
@@ -634,8 +634,8 @@ const Header = () => {
     <div ref={headerRef} className='xl:px-30  md:px-10 mt-5 sticky top-5 z-50 '>
     <div className='flex justify-between items-center gap-5 w-full   p-4 bg-white rounded-[16px] text-[#1A1A1A] border-[#F5F5F5] border-[2px] '>
       <div onClick={() => router.push('/')} className='flex items-center gap-2'>
-        <Image src={'/logo/corseco.png'} height={43} width={43} alt='logo' />
-        <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[150%]'>Corseco.tech</p>
+        <Image src={'/logo/corsecologo.png'} height={80} width={160} alt='logo' />
+        {/* <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[150%]'>Corseco.tech</p> */}
       </div>
       
       <div className=" hidden lg:flex justify-center gap-5 w-1/2 self-stretch   items-center">
@@ -696,7 +696,7 @@ const Header = () => {
               {/* Mobile Header */}
               <div className="flex justify-between items-center p-4 border-b">
                 <div onClick={() => router.push('/')} className='flex items-center gap-2 cursor-pointer'>
-                  <Image src={'/logo/corseco.png'} height={43} width={43} alt='logo' />
+                  <Image src={'/logo/corsecologo.png'} height={43} width={43} alt='logo' />
                   <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[150%]'>Corseco.tech</p>
                 </div>
                 <button onClick={closeMobileMenu} className='cursor-pointer'>

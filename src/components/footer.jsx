@@ -2,6 +2,7 @@
 import React from 'react'
 import { Input } from './ui/input'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image';
 
 const Footer = () => {
     const router= useRouter()
@@ -10,11 +11,7 @@ const Footer = () => {
             <div className='grid md:grid-cols-5 grid-cols-1 md:gap-20 gap-10'>
                 <div className='md:col-span-2 col-span-1 flex flex-col md:gap-20 gap-10'>
                     <div className='flex items-center justify-center md:justify-start gap-2'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44" viewBox="0 0 43 44" fill="none">
-                            <path d="M0 8.50012C0 4.08184 3.58172 0.5 8 0.5C16.9324 0.5 25.8967 0.5 34.9999 0.5C39.4182 0.5 43 4.08172 43 8.5C43 17.4324 43 26.3967 43 35.4999C43 39.9182 39.4183 43.5 35 43.5C26.0676 43.5 17.1033 43.5 8.00012 43.5C3.58184 43.5 0 39.9183 0 35.5C0 26.5676 0 17.6033 0 8.50012Z" fill="#020202" />
-                            <path d="M21 7.5C21.66 7.5 22.32 7.5 23 7.5C23.4125 8.7375 23.825 9.975 24.25 11.25C25.6192 14.8379 26.8119 17.1975 30 19.5C33.6354 20.7777 33.6354 20.7777 37 21.5C37 22.16 37 22.82 37 23.5C36.3967 23.647 35.7934 23.7939 35.1719 23.9453C30.8628 25.1546 28.503 25.9215 25.5 29.375C24.1555 32.176 23.3612 34.4297 23 37.5C22.34 37.5 21.68 37.5 21 37.5C20.7731 36.4481 20.5463 35.3962 20.3125 34.3125C19.1363 30.2776 17.3586 28.1123 14 25.5C11.6589 24.5674 9.47921 24.0347 7 23.5C7 22.84 7 22.18 7 21.5C8.27057 21.0201 9.54147 20.5411 10.8125 20.0625C11.5202 19.7957 12.2279 19.5288 12.957 19.2539C14.6267 18.6377 16.3116 18.0628 18 17.5C19.027 15.1711 19.027 15.1711 19.6875 12.4375C19.9389 11.5184 20.1902 10.5993 20.4492 9.65234C20.631 8.94207 20.8127 8.2318 21 7.5Z" fill="#F1F1F1" />
-                        </svg>
-                        <p className='text-[32px] font-bold leading-[150%]' >Corseco.tech</p>
+                         <Image src='/logo/corsecologo.png' alt='logo' width={200} height={100}/>
                     </div>
                     <div className=' hidden //flex flex-col gap-[49px]'>
                         <div className='flex text-center md:text-left flex-col gap-2'>
@@ -35,26 +32,26 @@ const Footer = () => {
                 </div>
                 <div className='flex flex-col  text-center md:text-left gap-2'>
                     <h3 className='text-[24px] font-bold leading-[150%] '>About Us</h3>
-                    <p onClick={()=>router.push('/about')} className='text-[16px] cursor-pointer leading-[150%] '>About</p>
+                    <p onClick={()=>router.push('/about')} className='text-[16px] cursor-pointer hover:text-blue-400 leading-[150%] '>About</p>
                     <p className='text-[16px] hidden  leading-[150%] '>Blog</p>
 
                 </div>
                 <div className='flex flex-col text-center md:text-left gap-2'>
                     <h3 className='text-[24px] font-bold leading-[150%] '>Industries</h3>
-                    <p className='text-[16px]  leading-[150%] '>Scrap</p>
-                    <p className='text-[16px]  leading-[150%] '>Furniture</p>
-                    <p className='text-[16px]  leading-[150%] '>Construction</p>
+                    <p  onClick={()=>router.push('/scrapandmetals')} className='text-[16px]  hover:text-blue-400 cursor-pointer leading-[150%] '>Scrap</p>
+                    <p  onClick={()=>router.push('/furniture')} className='text-[16px] hover:text-blue-400 cursor-pointer leading-[150%] '>Furniture</p>
+                    <p  onClick={()=>router.push('/construction')} className='text-[16px] hover:text-blue-400 cursor-pointer leading-[150%] '>Construction</p>
                 </div>
                 <div className='flex flex-col text-center md:text-left gap-2'>
                     <h3 className='text-[24px] font-bold leading-[150%] '>Contact</h3>
-                    <p className='text-[16px]  leading-[150%] '>+91-98180 04499</p>
+                    <p  className='text-[16px]  leading-[150%] '>+91-98180 04499</p>
                     <p className='text-[16px]  leading-[150%] '>+1 705-3337229</p>
-                    <p className='text-[16px]  leading-[150%] '>Vivek@corseco.tech</p>
+                   <a href="mailto:vivek@corseco.tech"> <p className='text-[16px]  leading-[150%] '>Vivek@corseco.tech</p></a>
 
                 </div>
             </div>
             <div className='pt-6 border-t flex md:flex-row flex-col gap-10 items-center justify-between border-t-[#808080]'>
-                <div  onClick={()=>window.open('https://www.linkedin.com/company/corsecotech/','_blank')} className='flex items-center justify-between w-[154px]  '>
+                <div  onClick={()=>window.open('https://www.linkedin.com/company/corsecotech/','_blank')} className='flex items-center cursor-pointer justify-between w-[154px]  '>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                         <path d="M31.6667 5C32.5507 5 33.3986 5.35119 34.0237 5.97631C34.6488 6.60143 35 7.44928 35 8.33333V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V8.33333C5 7.44928 5.35119 6.60143 5.97631 5.97631C6.60143 5.35119 7.44928 5 8.33333 5H31.6667ZM30.8333 30.8333V22C30.8333 20.559 30.2609 19.177 29.2419 18.1581C28.223 17.1391 26.841 16.5667 25.4 16.5667C23.9833 16.5667 22.3333 17.4333 21.5333 18.7333V16.8833H16.8833V30.8333H21.5333V22.6167C21.5333 21.3333 22.5667 20.2833 23.85 20.2833C24.4688 20.2833 25.0623 20.5292 25.4999 20.9668C25.9375 21.4043 26.1833 21.9978 26.1833 22.6167V30.8333H30.8333ZM11.4667 14.2667C12.2093 14.2667 12.9215 13.9717 13.4466 13.4466C13.9717 12.9215 14.2667 12.2093 14.2667 11.4667C14.2667 9.91667 13.0167 8.65 11.4667 8.65C10.7196 8.65 10.0032 8.94675 9.47498 9.47498C8.94675 10.0032 8.65 10.7196 8.65 11.4667C8.65 13.0167 9.91667 14.2667 11.4667 14.2667ZM13.7833 30.8333V16.8833H9.16667V30.8333H13.7833Z" fill="#1A1A1A" />
                     </svg>
