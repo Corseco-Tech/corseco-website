@@ -40,7 +40,7 @@ const boardofadvisors=[
     {
         id:2,
         name:"Jitendra Srivastava",
-        designation:"Founder Streetwall India-Acquired by blue Water works ",
+        designation:"Bluewaterworks",
         image:"/images/jitendra.png"
     },
     // {
@@ -64,19 +64,19 @@ const boardofadvisors=[
     {
         id:6,
         name:"Siddhartha Chauahan",
-        designation:"Calsys India",
+        designation:"Calsys India Pvt. Ltd.",
         image:"/images/siddartha.jpeg"
     },
        {
         id:7,
-        name:"Akku",
-        designation:"Blue Water Works",
+        name:"Aditya Pratap Singh",
+        designation:"Barclays",
         image:"/images/Akku.jpeg"
     },
       {
         id:8,
         name:"AI Venture Lab",
-        designation:"Ai venture labs",
+        designation:"INSEAD x AI Venture Lab",
         image:"/images/AI_VENTURE_LAB.png"
     }
 

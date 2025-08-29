@@ -18,10 +18,10 @@ export default function Home() {
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2  lg:px-[90.5px] px-5 ">
               <p className="font-bold lg:text-[72px] text-[40px]    leading-[120%] text-center">
-                Trust, verified. Trade accelerated.
+                Trust, verified. Trade <br/> accelerated.
               </p>
               <p className="text-[#808080] md:text-[24px] text-lg  leadimg-[150%] lg:px-[90.5px]  text-center">
-                AI-driven QC for global shipments, Instantly verify goods, documents and locations - no delays, no uncertainty.
+                AI-driven QC for global shipments, Instantly verify goods, documents and <br/> locations - no delays, no uncertainty.
               </p>
             </div>
             <div className="mx-auto">
