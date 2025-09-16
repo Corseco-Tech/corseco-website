@@ -1,112 +1,199 @@
-import Companies from "@/components/companies";
-import Descriptions from "@/components/Descriptions";
-import FAQs from "@/components/FAQs";
-import Header from "@/components/header";
-import Qualitycheck from "@/components/Qualitycheck";
-import ShipmentVerification from "@/components/shipmentVerification";
-import Tradeintelligence from "@/components/tradeintelligence";
-import Transformshippingexperiance from "@/components/transformshippingexperiance";
-import Image from "next/image";
+'use client';
+
+import React from 'react';
+import { Box, Container, Stack, Grid, Card, Title, Text, Group, Badge, Button } from '@mantine/core';
+import { IconStar, IconArrowRight } from '@tabler/icons-react';
+import HeroSection from '@/components/HeroSection';
+import Qualitycheck from '@/components/Qualitycheck';
+import Companies from '@/components/companies';
+import Image from 'next/image';
 
 export default function Home() {
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'Quality Manager',
+      company: 'Global Metals Inc.',
+      content: 'Corseco has revolutionized our quality control process. The AI-powered detection is incredibly accurate and saves us hours every day.',
+      rating: 5,
+      avatar: '/images/profile1.png'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Operations Director',
+      company: 'Furniture World',
+      content: 'The forensic analysis capabilities are outstanding. We can now verify authenticity with complete confidence.',
+      rating: 5,
+      avatar: '/images/profile2.png'
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'Compliance Officer',
+      company: 'Retail Solutions',
+      content: 'Document verification has never been this seamless. Corseco ensures we stay compliant effortlessly.',
+      rating: 5,
+      avatar: '/images/profile3.png'
+    }
+  ];
   
   return (
-    <div className="flex flex-col -mt-28   bg-[#F5F5F5]">
-      <div className="xl:px-30  md:px-10 px-5  mt-40 pt-5 md:pb-34 pb-10 flex flex-col  ">
-        <div className="flex flex-col  gap-[34px]">
-         
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2  lg:px-[90.5px] px-5 ">
-              <p className="font-bold lg:text-[72px] text-[40px]    leading-[120%] text-center">
-                Trust, verified. Trade <br/> accelerated.
-              </p>
-              <p className="text-[#808080] md:text-[24px] text-lg  leadimg-[150%] lg:px-[90.5px]  text-center">
-                AI-driven QC for global shipments, Instantly verify goods, documents and <br/> locations - no delays, no uncertainty.
-              </p>
-            </div>
-            <div className="mx-auto">
-              <Image src={'/images/ship.png'} alt="video " height={460} width={1200} />
-              <div className=" hidden mx-auto lg:w-[800px] md:w-[700px] sm:w-[500px]  ">
-  <div className="aspect-video rounded-[24px] overflow-hidden">
-    <iframe
-      className="w-full h-full"
-      src="https://www.youtube.com/embed/KSQMGyjN5DI"
-      title="YouTube video"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
-</div>
+    <Box>
+      {/* Hero Section */}
+      <HeroSection />
 
- </div>
-          </div>
-        </div>
-      </div>
-      <Companies />
+      {/* Quality Check Section */}
       <Qualitycheck />
-       <div className="flex lg:px-30 md:px-15 px-5 md:py-10 py-5 flex-col gap-10 bg-[#F5F5F5]">
-         <p className="font-[700] md:text-[40px] text-[24px]  leading-[120%]  text-center">Backed up by numbers</p>
-         <div className="flex justify-between gap-5 items-center"> 
-              <div className="flex flex-col gap-2 text-center">
-                <p className="md:text-[32px]  text-lg font-[700] leading-[120%]">99%</p>
-                 <p className="md:text-[16px] text-sm leading-[150%]">Detection accuracy</p>
-              </div>
-               <div className="flex flex-col gap-2 text-center">
-                <p className="md:text-[32px]  text-lg font-[700] leading-[120%]">75%</p>
-                 <p className="md:text-[16px] text-sm leading-[150%]">Reduction of QC time</p>
-              </div>
-               <div className="flex flex-col gap-2 text-center">
-                <p className="md:text-[32px]  text-lg font-[700] leading-[120%]">100+hrs</p>
-                 <p className="md:text-[16px] text-sm leading-[150%]">Time Saved</p>
-              </div>
-              
-         </div>
-       </div>
-       <Descriptions/>
-       <ShipmentVerification/>
-         <div className="lg:px-30 md:px-15 px-5 md:py-20 py-10  bg-white flex flex-col gap-10 ">
-            <div className="flex flex-col lg:max-w-2/3 max-w-full gap-4 ">
-              <p className="md:text-[40px] text-[24px]  font-[700] leading-[120%]">Trusted by industry leaders</p>
-              <p className="md:text-[24px] text-base text-[#808080]   leading-[150%]">See how businesses use our platform to secure shipments and eliminate uncertainty in global trade.</p>
-            </div>
-            <div className="flex flex-wrap md:flex-row md:justify-center items-center  gap-6 gap-y-5 flex-col  ">
-               <div className="flex flex-col sm:w-[336px] w-full gap-16 p-6 border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
-                  <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
-                  <div className="flex items-center gap-3">
-                    <Image src={'/images/profile1.png'} width={80} height={80} />
-                      <div>
-                           <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
-                            <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
-                      </div>
-                  </div>
-               </div>
-                <div className="flex flex-col  sm:w-[336px] w-full gap-16 p-6 border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
-                  <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
-                  <div className="flex items-center gap-3">
-                    <Image src={'/images/profile2.png'} width={80} height={80} />
-                      <div>
-                           <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
-                            <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
-                      </div>
-                  </div>
-               </div>
-                <div className="flex flex-col   sm:w-[336px] w-full gap-16 p-6  border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
-                  <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
-                  <div className="flex items-center gap-3">
-                    <Image src={'/images/profile3.png'} width={80} height={80} />
-                      <div>
-                           <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
-                            <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
-                      </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <Tradeintelligence/>
-         <FAQs/>
-         <div className="lg:px-30 md:px-15 px-5 md:py-10 py-5">
-          <Transformshippingexperiance/>
-         </div>
-    </div>
+
+      {/* Companies Section */}
+      <Companies />
+
+      {/* Testimonials Section */}
+      <Box style={{ backgroundColor: 'white', padding: '4rem 0' }}>
+        <Container size="xl">
+          <Stack gap="xl" align="center" mb="3rem">
+            <Badge size="lg" variant="light" color="green" style={{ marginBottom: '1rem' }}>
+              Customer Stories
+            </Badge>
+            <Title 
+              order={2} 
+              style={{ 
+                textAlign: 'center', 
+                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontWeight: '700',
+                color: '#1e293b'
+              }}
+            >
+              What our customers say
+            </Title>
+            <Text 
+              size="xl" 
+              style={{ 
+                textAlign: 'center', 
+                color: '#64748b',
+                maxWidth: '600px'
+              }}
+            >
+              See what our customers say about their experience with Corseco
+            </Text>
+          </Stack>
+
+          <Grid gutter="xl">
+            {testimonials.map((testimonial, index) => (
+              <Grid.Col key={index} span={{ base: 12, md: 4 }}>
+                <Card 
+                  p="xl" 
+                  radius="xl" 
+                  shadow="sm" 
+                  style={{ 
+                    height: '100%',
+                    border: '1px solid #e2e8f0',
+                    transition: 'all 0.3s ease'
+                  }}
+                  className="testimonial-card"
+                >
+                  <Stack gap="md" style={{ height: '100%' }}>
+                    <Group gap="sm">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <IconStar key={i} size={16} color="var(--mantine-color-yellow-6)" fill="var(--mantine-color-yellow-6)" />
+                      ))}
+                    </Group>
+                    
+                    <Text 
+                      style={{ 
+                        color: '#374151',
+                        lineHeight: '1.6',
+                        fontStyle: 'italic',
+                        flex: 1
+                      }}
+                    >
+                      "{testimonial.content}"
+                    </Text>
+                    
+                    <Group gap="md" mt="auto">
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        width={48}
+                        height={48}
+                        style={{ borderRadius: '50%' }}
+                      />
+                      <Box>
+                        <Text fw={600} style={{ color: '#1e293b' }}>
+                          {testimonial.name}
+                        </Text>
+                        <Text size="sm" c="dimmed">
+                          {testimonial.role} at {testimonial.company}
+                        </Text>
+                      </Box>
+                    </Group>
+                  </Stack>
+                </Card>
+              </Grid.Col>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* CTA Section */}
+      <Box 
+        style={{ 
+          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+          padding: '4rem 0',
+          color: 'white'
+        }}
+      >
+        <Container size="xl">
+          <Stack gap="xl" align="center" style={{ textAlign: 'center' }}>
+            <Title 
+              order={2} 
+              style={{ 
+                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontWeight: '700',
+                color: 'white'
+              }}
+            >
+              Ready to transform your quality verification?
+            </Title>
+            <Text 
+              size="xl" 
+              style={{ 
+                color: '#94a3b8',
+                maxWidth: '600px'
+              }}
+            >
+              Join hundreds of companies already using Corseco to ensure quality, 
+              trust, and compliance in their trade operations.
+            </Text>
+            
+            <Group gap="md" mt="lg">
+              <Button
+                size="lg"
+                rightSection={<IconArrowRight size={20} />}
+                style={{
+                  background: 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)',
+                  border: 'none',
+                  padding: '1rem 2rem'
+                }}
+                onClick={() => window.location.href = '/booking'}
+              >
+                Book a Demo
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                style={{
+                  borderColor: '#64748b',
+                  color: 'white',
+                  padding: '1rem 2rem'
+                }}
+                onClick={() => window.location.href = '/contactus'}
+              >
+                Contact Sales
+              </Button>
+            </Group>
+          </Stack>
+        </Container>
+      </Box>
+    </Box>
   );
 }
