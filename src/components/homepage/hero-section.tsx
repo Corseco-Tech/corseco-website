@@ -43,7 +43,9 @@ const HeroSection: React.FC = () => {
               maxWidth: '600px'
             }}
           >
-            AI-powered QC for shipments worldwide. Instant verification of goods, documents, and origins.
+            AI-powered QC for shipments worldwide. <br />
+            Instant verification of goods, documents, and origins.
+
           </Text>
           
           <Button

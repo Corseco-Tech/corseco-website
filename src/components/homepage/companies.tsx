@@ -33,7 +33,7 @@ const Companies: React.FC = () => {
   const duplicatedCompanies = [...companies, ...companies];
 
   return (
-    <Box style={{ backgroundColor: 'white', padding: '4rem 0' }}>
+    <Box style={{ backgroundColor: '#F8FAFC', padding: '4rem 0' }}>
       <Container size="xl">
         <Stack gap="md" align="center" mb="2rem">
           {/* <Group gap="sm">
