@@ -51,7 +51,7 @@ const Qualitycheck = () => {
   ];
 
   return (
-    <Box style={{ backgroundColor: '#f8fafc', padding: '4rem 0' }}>
+    <Box style={{ backgroundColor: 'var(--corseco-light-bg)', padding: '4rem 0' }}>
       <Container size="xl">
         <Stack gap="xl" align="center" mb="3rem">
           <Badge size="lg" variant="light" color="blue" style={{ marginBottom: '1rem' }}>
@@ -59,24 +59,13 @@ const Qualitycheck = () => {
           </Badge>
           <Title 
             order={2} 
-            style={{ 
-              textAlign: 'center', 
-              fontSize: 'clamp(2rem, 4vw, 3.5rem)',
-              fontWeight: '700',
-              lineHeight: '1.2',
-              color: '#1e293b'
-            }}
+            className="section-title quality-title"
           >
             Complete Platform Features
           </Title>
           <Text 
             size="xl" 
-            style={{ 
-              textAlign: 'center', 
-              color: '#64748b',
-              maxWidth: '800px',
-              lineHeight: '1.6'
-            }}
+            className="section-subtitle quality-subtitle"
           >
             All the tools you need in one unified platform - AI quality control, GPS verification, 
             document authentication, and certificate validation.
@@ -92,7 +81,7 @@ const Qualitycheck = () => {
                 shadow="sm" 
                 style={{ 
                   height: '100%',
-                  border: '1px solid #e2e8f0',
+                  border: '1px solid var(--corseco-soft-grey)',
                   transition: 'all 0.3s ease',
                   cursor: 'pointer'
                 }}
@@ -127,17 +116,13 @@ const Qualitycheck = () => {
                     </Badge>
                   </Group>
                   
-                  <Title order={4} style={{ color: '#1e293b', fontWeight: '600' }}>
+                  <Title order={4} className="feature-title">
                     {feature.title}
                   </Title>
                   
                   <Text 
                     size="sm" 
-                    style={{ 
-                      color: '#64748b',
-                      lineHeight: '1.6',
-                      flex: 1
-                    }}
+                    className="feature-description"
                   >
                     {feature.description}
                   </Text>
