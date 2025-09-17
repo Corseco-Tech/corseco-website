@@ -76,7 +76,7 @@ const boardofadvisors: BoardAdvisor[] = [
     id: 7,
     name: "Aditya Pratap Singh",
     designation: "Barclays",
-    image: "/images/adity.jpeg"
+    image: "/images/aditya.jpeg"
   },
   {
     id: 8,
@@ -302,7 +302,7 @@ const AboutUs: React.FC = () => {
                   }}
                 >
                   <Image
-                    src="/images/vivek.jpg"
+                    src="/images/vivek.png"
                     alt="Vivek Singh"
                     width={400}
                     height={400}
