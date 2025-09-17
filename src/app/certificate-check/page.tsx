@@ -91,7 +91,7 @@ const CertificateCheck: React.FC = () => {
               }}
             >
               Automatically validate certificates submitted by suppliers or manufacturers 
-              to ensure they're real, unexpired, and compliant with global standards.
+              to ensure they&apos;re real, unexpired, and compliant with global standards.
             </Text>
 
             <Box

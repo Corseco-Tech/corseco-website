@@ -7,34 +7,24 @@ import { cn } from "@/lib/utils";
 
 interface TooltipProviderProps extends React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Provider> {}
 
-const TooltipProvider = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitive.Provider>,
-  TooltipProviderProps
->(({ delayDuration = 0, ...props }, ref) => (
+const TooltipProvider = ({ delayDuration = 0, ...props }: TooltipProviderProps) => (
   <TooltipPrimitive.Provider
-    ref={ref}
     data-slot="tooltip-provider"
     delayDuration={delayDuration}
     {...props}
   />
-));
-TooltipProvider.displayName = TooltipPrimitive.Provider.displayName;
+);
 
 interface TooltipProps extends React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Root> {}
 
-const Tooltip = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitive.Root>,
-  TooltipProps
->(({ ...props }, ref) => (
+const Tooltip = ({ ...props }: TooltipProps) => (
   <TooltipProvider>
     <TooltipPrimitive.Root
-      ref={ref}
       data-slot="tooltip"
       {...props}
     />
   </TooltipProvider>
-));
-Tooltip.displayName = TooltipPrimitive.Root.displayName;
+);
 
 const TooltipTrigger = TooltipPrimitive.Trigger;
 

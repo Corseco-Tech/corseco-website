@@ -109,7 +109,7 @@ function SidebarProvider({
 
   // We add a state so that we can do data-state="expanded" or "collapsed".
   // This makes it easier to style the sidebar with Tailwind classes.
-  const state = open ? "expanded" : "collapsed";
+  const state: "expanded" | "collapsed" = open ? "expanded" : "collapsed";
 
   const contextValue = React.useMemo(() => ({
     state,
@@ -130,7 +130,7 @@ function SidebarProvider({
             "--sidebar-width": SIDEBAR_WIDTH,
             "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
             ...style
-          }}
+          } as React.CSSProperties}
           className={cn(
             "group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full",
             className
@@ -183,7 +183,7 @@ function Sidebar({
           className="bg-sidebar text-sidebar-foreground w-(--sidebar-width) p-0 [&>button]:hidden"
           style={{
             "--sidebar-width": SIDEBAR_WIDTH_MOBILE
-          }}
+          } as React.CSSProperties}
           side={side}>
           <SheetHeader className="sr-only">
             <SheetTitle>Sidebar</SheetTitle>
@@ -430,7 +430,7 @@ function SidebarGroupLabel({
   );
 }
 
-interface SidebarGroupActionProps extends React.HTMLAttributes<HTMLDivElement> {
+interface SidebarGroupActionProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
 }
 
@@ -573,7 +573,7 @@ function SidebarMenuButton({
   );
 }
 
-interface SidebarMenuActionProps extends React.HTMLAttributes<HTMLDivElement> {
+interface SidebarMenuActionProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
   showOnHover?: boolean;
 }
@@ -657,7 +657,7 @@ function SidebarMenuSkeleton({
         data-sidebar="menu-skeleton-text"
         style={{
           "--skeleton-width": width
-        }} />
+        } as React.CSSProperties} />
     </div>
   );
 }

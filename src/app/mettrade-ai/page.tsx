@@ -22,7 +22,7 @@ const MettradeAi: React.FC = () => {
                 </div>
                 <div className='flex flex-col gap-2'>
                     <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[120%] text-center sm:text-left'>OVERVIEW</p>
-                    <p className='md:text-[24px] text-[16px]  text-[#808080] leading-[150%] text-center sm:text-left'>Mettrade AI is Corseco's flagship engine for automated quality control. It uses advanced computer vision and machine learning to inspect goods, detect defects, and verify product standards in real-time.</p>
+                    <p className='md:text-[24px] text-[16px]  text-[#808080] leading-[150%] text-center sm:text-left'>Mettrade AI is Corseco&apos;s flagship engine for automated quality control. It uses advanced computer vision and machine learning to inspect goods, detect defects, and verify product standards in real-time.</p>
                 </div>
             </div>
             <div className='flex flex-col gap-10'>

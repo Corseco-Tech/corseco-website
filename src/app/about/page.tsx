@@ -168,7 +168,7 @@ const AboutUs: React.FC = () => {
               lineHeight: '1.6'
             }}
           >
-            At Corseco Tech, we're redefining global shipment verification with the power of artificial intelligence. 
+            At Corseco Tech, we&apos;re redefining global shipment verification with the power of artificial intelligence. 
             Our mission is simple: eliminate guesswork from quality control and replace it with instant, automated proof. 
             In a world where speed, integrity, and traceability matter more than ever, Corseco Tech delivers AI-driven 
             solutions that ensure your shipments meet the highest standards—every time.

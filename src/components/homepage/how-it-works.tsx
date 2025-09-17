@@ -75,7 +75,7 @@ const HowItWorks: React.FC = () => {
               margin: 0
             }}
           >
-            Here's how we transform trade complexity into simple, verified steps.
+            Here&apos;s how we transform trade complexity into simple, verified steps.
           </Text>
         </Stack>
 

@@ -8,7 +8,7 @@ const Booking: React.FC = () => {
       {/* Header */}
       <div className='text-center px-4'> 
         <h1 className='lg:text-[72px] md:text-[40px] text-[32px] font-bold leading-tight'>
-          We're Excited to Meet You!
+          We&apos;re Excited to Meet You!
         </h1>
         <p className='lg:text-[24px] md:text-[20px] text-[16px] text-[#808080] mt-4'>
           Grab a time that works best for you.
@@ -25,7 +25,7 @@ const Booking: React.FC = () => {
           <div className='space-y-6'>
             <div className='space-y-3'>
               <h3 className='lg:text-[24px] md:text-[20px] text-[16px] font-bold text-[#78797C]'>
-                On this strategy call we'll discuss:
+                On this strategy call we&apos;ll discuss:
               </h3>
               <ul className='list-disc pl-6 space-y-2 md:text-[16px] text-[14px] text-[#78797C]'>
                 <li>Detecting tampering, image fraud</li>
@@ -36,7 +36,7 @@ const Booking: React.FC = () => {
             
             <div className='space-y-3'>
               <h3 className='lg:text-[24px] md:text-[20px] text-[16px] font-bold text-[#78797C]'>
-                From there, we'll do a deep-dive into the products built to solve many of the issues related to global shipping
+                From there, we&apos;ll do a deep-dive into the products built to solve many of the issues related to global shipping
               </h3>
               <ul className='list-disc pl-6 space-y-2 md:text-[16px] text-[14px] text-[#78797C]'>
                 <li>QC and compliance reports</li>
@@ -66,9 +66,12 @@ const Booking: React.FC = () => {
                 utmMedium: 'Booking Form'
               }}
                pageSettings={{
-    resize: true,
-
-  }}
+                hideLandingPageDetails: false,
+                hideEventTypeDetails: false,
+                backgroundColor: '#ffffff',
+                textColor: '#4d5055',
+                primaryColor: '#00a2ff'
+              }}
             />
           </div>
         </div>

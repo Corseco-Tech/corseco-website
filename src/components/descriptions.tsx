@@ -8,7 +8,7 @@ const Descriptions: React.FC = () => {
           <div className=' flex flex-col lg:w-1/2 order-2 lg:order-1 gap-2 '>
             <p className='font-bold md:text-[40px] text-[16px] text-center md:text-left leading-[120%]'>Quality verification - Instant QC, zero guesswork</p>
             <p  className=' text-[#808080] sm:text-base text-xs leading-[150%]' >Say goodbye to manual checks and delayed reports. Our AI-driven QC system verifies the quality 
-                of goods the moment they're inspected—whether at the factory floor, port, or warehouse. Using advanced image 
+                of goods the moment they&apos;re inspected—whether at the factory floor, port, or warehouse. Using advanced image 
                 recognition, data validation, and location tracking, we deliver instant, objective proof that your shipments meet 
                 required standards. No human bias. No uncertainty.
                  Just fast, consistent, and verifiable quality—on every shipment, anywhere in the world.</p>
@@ -30,7 +30,7 @@ const Descriptions: React.FC = () => {
              <div className='sm:p-10 p-5 flex flex-col gap-6 lg:w-1/2 w-full  bg-[#F0F0F0] md:rounded-[40px] rounded-[20px] self-stretch '>
                 <Image src={'/assets/document-validation.png'} alt="Document Validation" width={453} height={453} className='w-full rounded-[20px]' />
                 <p  className=' font-bold md:text-[40px] text-[16px] leading-[120%] md:text-left text-center' >Document validation - Paperwork matched, risk removed.</p>
-                <p  className=' text-[#808080] sm:text-base text-xs leading-[150%]' >Our AI validates shipping documents the moment they're uploaded—flagging discrepancies, missing fields, and forged entries in seconds. From invoices and packing lists to inspection reports and compliance certificates, we cross-check every detail against known data and shipment records. No more manual paperwork reviews or risky assumptions. Just instant confidence that your documents are accurate, authentic, and audit-ready.</p>
+                <p  className=' text-[#808080] sm:text-base text-xs leading-[150%]' >Our AI validates shipping documents the moment they&apos;re uploaded—flagging discrepancies, missing fields, and forged entries in seconds. From invoices and packing lists to inspection reports and compliance certificates, we cross-check every detail against known data and shipment records. No more manual paperwork reviews or risky assumptions. Just instant confidence that your documents are accurate, authentic, and audit-ready.</p>
             </div>
         </div>
     </div>

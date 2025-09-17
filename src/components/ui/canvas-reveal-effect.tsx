@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import React, { useMemo, useRef } from "react";
+import React, { useMemo, useRef, useCallback } from "react";
 import * as THREE from "three";
 
 interface CanvasRevealEffectProps {
@@ -194,13 +194,13 @@ const ShaderMaterial: React.FC<ShaderMaterialProps> = ({
     }
     lastFrameTime = timestamp;
 
-    const material = ref.current.material;
+    const material = ref.current.material as THREE.ShaderMaterial;
     const timeLocation = material.uniforms.u_time;
     timeLocation.value = timestamp;
   });
 
-  const getUniforms = () => {
-    const preparedUniforms = {};
+  const getUniforms = useCallback(() => {
+    const preparedUniforms: Record<string, any> = {};
 
     for (const uniformName in uniforms) {
       const uniform = uniforms[uniformName];
@@ -220,7 +220,7 @@ const ShaderMaterial: React.FC<ShaderMaterialProps> = ({
           break;
         case "uniform3fv":
           preparedUniforms[uniformName] = {
-            value: uniform.value.map((v) =>
+            value: uniform.value.map((v: any) =>
               new THREE.Vector3().fromArray(v)),
             type: "3fv",
           };
@@ -242,7 +242,7 @@ const ShaderMaterial: React.FC<ShaderMaterialProps> = ({
       value: new THREE.Vector2(size.width * 2, size.height * 2),
     }; // Initialize u_resolution
     return preparedUniforms;
-  };
+  }, [uniforms, size.width, size.height]);
 
   // Shader material
   const material = useMemo(() => {
@@ -269,7 +269,7 @@ const ShaderMaterial: React.FC<ShaderMaterialProps> = ({
     });
 
     return materialObject;
-  }, [size.width, size.height, source]);
+  }, [source, getUniforms]);
 
   return (
     <mesh ref={ref}>

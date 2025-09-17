@@ -81,8 +81,8 @@ const ForensicAnalysis: React.FC = () => {
                 lineHeight: '1.6'
               }}
             >
-              Corseco's forensic AI analyzes photos and files for signs of manipulation, 
-              fraud, or tampering—offering you full transparency on what's real and what's not.
+              Corseco&apos;s forensic AI analyzes photos and files for signs of manipulation, 
+              fraud, or tampering—offering you full transparency on what&apos;s real and what&apos;s not.
             </Text>
 
             <Box
@@ -313,7 +313,7 @@ const ForensicAnalysis: React.FC = () => {
                 
                 <Text size="lg" style={{ color: '#64748b', lineHeight: '1.6' }}>
                   Anyone dealing with high-value shipments, frequent disputes, or supplier-side 
-                  data you can't fully trust. Our forensic analysis ensures complete transparency 
+                  data you can&apos;t fully trust. Our forensic analysis ensures complete transparency 
                   and fraud protection for your most critical trade operations.
                 </Text>
               </Stack>
