@@ -1,9 +1,9 @@
 'use client';
-import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Menu, X, ChevronDown, Shield, Zap, Globe, Users, HelpCircle } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
+import Logo from './Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -75,18 +75,24 @@ const Header = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contactus' },
     { name: 'Help Center', href: '/helpcenter' },
-  ]
+  ];
+
+  const handleDemoClick = () => {
+    router.push('/booking');
+    closeMobileMenu();
+  };
 
   const DropdownMenu = ({ items, isOpen }) => {
     if (!isOpen) return null
 
     return (
-      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50">
+      <div className="absolute top-full left-0 mt-2 w-64 rounded-xl shadow-lg py-2 z-50" style={{ backgroundColor: 'var(--card)', border: '1px solid var(--border)' }}>
         {items.map((item, index) => (
           <Link
             key={index}
             href={item.href}
-                            className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+            className="flex items-center gap-3 px-4 py-3 transition-colors duration-200 hover:bg-muted"
+            style={{ color: 'var(--foreground)' }}
             onClick={closeMobileMenu}
           >
             {item.icon && <item.icon size={18} />}
@@ -100,25 +106,12 @@ const Header = () => {
   return (
     <header 
       ref={headerRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
+      className={`header-container ${isScrolled ? 'header-scrolled' : ''}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div 
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={() => router.push('/')}
-          >
-            <Image 
-              src="/logo/corsecologo.png" 
-              height={60} 
-              width={120} 
-              alt="Corseco.tech" 
-              className="h-12 w-auto"
-            />
-      </div>
+          <Logo />
       
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -127,7 +120,8 @@ const Header = () => {
                 {item.dropdown ? (
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                    className="flex items-center gap-1 px-3 py-2 transition-colors duration-200 font-medium"
+                    style={{ color: 'var(--white)' }}
                   >
                     {item.name}
                     <ChevronDown 
@@ -140,7 +134,8 @@ const Header = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                    className="px-3 py-2 transition-colors duration-200 font-medium"
+                    style={{ color: 'var(--white)' }}
                   >
                     {item.name}
         </Link>
@@ -158,17 +153,18 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             <button
-              onClick={() => router.push('/booking')}
-              className="px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              onClick={handleDemoClick}
+              className="cta-button"
             >
               Book a Demo
-        </button>
-      </div>
+            </button>
+          </div>
       
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200"
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200"
+            style={{ color: 'var(--white)' }}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
@@ -176,7 +172,7 @@ const Header = () => {
   
               {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-lg">
+          <div className="lg:hidden absolute top-full left-0 right-0 shadow-lg border-t" style={{ backgroundColor: 'var(--color-primary)', borderColor: 'rgba(255, 255, 255, 0.1)' }}>
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item, index) => (
                 <div key={index}>
@@ -184,7 +180,8 @@ const Header = () => {
                   <div>
                     <button 
                         onClick={() => toggleDropdown(item.name)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                        className="flex items-center justify-between w-full px-3 py-2 text-left transition-colors duration-200 font-medium"
+                        style={{ color: 'var(--white)' }}
                       >
                         {item.name}
                         <ChevronDown 
@@ -200,7 +197,8 @@ const Header = () => {
                             <Link
                               key={subIndex}
                               href={subItem.href}
-                              className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                              className="flex items-center gap-3 px-3 py-2 transition-colors duration-200"
+                              style={{ color: 'rgba(255, 255, 255, 0.8)' }}
                               onClick={closeMobileMenu}
                             >
                               {subItem.icon && <subItem.icon size={16} />}
@@ -213,7 +211,8 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                      className="block px-3 py-2 transition-colors duration-200 font-medium"
+                      style={{ color: 'var(--white)' }}
                       onClick={closeMobileMenu}
                     >
                       {item.name}
@@ -223,17 +222,14 @@ const Header = () => {
               ))}
               
               {/* Mobile CTA Buttons */}
-              <div className="pt-4 border-t border-gray-100">
+              <div className="pt-4 border-t mobile-cta-border">
                 <button
-                  onClick={() => {
-        router.push('/booking')
-                    closeMobileMenu()
-                  }}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 font-medium shadow-lg"
+                  onClick={handleDemoClick}
+                  className="w-full cta-button mobile-cta-button"
                 >
                   Book a Demo
                 </button>
-      </div>  
+              </div>  
             </div>
           </div>
         )}
