@@ -12,14 +12,14 @@ export default function Home() {
   
   return (
     <div className="flex flex-col bg-[#F5F5F5]">
-      <section className="relative">
+      <section className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{ backgroundImage: "url('/assets/backgorund.jpg')" }}
         />
         <div className="absolute inset-0 bg-black/40" />
-        <div className="xl:px-30  md:px-10 px-5 pt-32 md:pb-34 pb-10 relative z-10">
-          <div className="h-[420px] md:h-[560px] w-full flex flex-col items-center justify-center text-center gap-4">
+        <div className="xl:px-30  md:px-10 px-5 relative z-10 min-h-screen flex items-center justify-center">
+          <div className="w-full flex flex-col items-center justify-center text-center gap-4">
             <p className="font-bold lg:text-[72px] text-[40px] leading-[120%] text-white">
               Trust, verified. Trade <br/> accelerated.
             </p>
