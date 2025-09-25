@@ -28,11 +28,11 @@ const ScrapAndMetals = () => {
                  </div>
                  <div className='flex flex-col  gap-20'>
                 <div className= "flex flex-wrap items-center justify-center gap-10">
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Visual verification of raw materials (steel, concrete, timber, fixtures)</p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Equipment integrity checks with AI analysis of wear, damage, or non-compliance</p>
-                         <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Automatic validation of delivery notes, test reports, and safety certifications</p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Location-based inspection proof to confirm supplier-side checks are real</p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Digital records for compliance, insurance claims, and dispute resolution</p>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Visual verification of raw materials (steel, concrete, timber, fixtures)</div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Equipment integrity checks with AI analysis of wear, damage, or non-compliance</div>
+                         <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Automatic validation of delivery notes, test reports, and safety certifications</div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Location-based inspection proof to confirm supplier-side checks are real</div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Digital records for compliance, insurance claims, and dispute resolution</div>
                     </div>
                     <div className="flex flex-col bg-[#F5F5F5] items-center gap-8 md:py-12 px-5 py-6 md:rounded-[40px] rounded-[20px]">
                    <div className="flex flex-col gap-8 items-center">

@@ -18,7 +18,7 @@ const CustomIntegrations = () => {
             <div className='flex flex-col gap-10 justify-center '>
                 <p className='lg:text-[72px] md:text-[48px] text-[32px] font-[700] text-[#1A1A1A] text-center leading-[120%]'>Custom Integrations</p>
                 <div className='flex justify-center w-full h-[460px]'>
-                <Image src={'/assets/custom-integrations.png'} alt='mettrade-ai' width={1000} height={1000} className='w-full h-full object-cover md:rounded-[24px] rounded-[8px]' /></div>
+                <Image src={'/assets/custom-integrations.png'} alt='custom-integrations' width={1000} height={1000} className='w-full h-full object-cover md:rounded-[24px] rounded-[8px]' /></div>
                 <div className='flex flex-col gap-2'>
                     <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[120%] text-center sm:text-left'>OVERVIEW</p>
                     <p className='md:text-[24px] text-[16px]  text-[#808080] leading-[150%] text-center sm:text-left'>Corseco integrates seamlessly into your tech stack to bring automated QC into your existing logistics, ERP, or compliance workflows.</p>
@@ -37,7 +37,7 @@ const CustomIntegrations = () => {
                     </div>  
                     <div className='flex flex-col gap-2 '>
                         <p className='text-[24px] font-[700] text-[#1A1A1A] text-center sm:text-left leading-[120%]'>WHO IS IT FOR?</p>
-                        <p className='flex  items-start md:items-center gap-2 text-[#808080] '> {bulletpoints()} Large organizations looking to unify quality control with internal tools, supply chain visibility platforms, or third-party logistics systems.</p>
+                        <div className='flex  items-start md:items-center gap-2 text-[#808080] '> {bulletpoints()} Large organizations looking to unify quality control with internal tools, supply chain visibility platforms, or third-party logistics systems.</div>
                        
                     </div>
                     <div></div>

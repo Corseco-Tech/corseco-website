@@ -28,11 +28,11 @@ const ScrapAndMetals = () => {
                  </div>
                  <div className='flex flex-col  gap-20'>
                 <div className= "flex flex-wrap items-center justify-center gap-10">
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()} Image-based inspection of finishes, dimensions, and craftsmanship</p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Real-time defect detection for dents, scratches, poor assembly & more</p>
-                         <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Packaging integrity checks to reduce in-transit damage</p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()} Document and invoice validation for smoother customs clearance</p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Geo-tagged photo audits to verify inspections happen on-site </p>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()} Image-based inspection of finishes, dimensions, and craftsmanship</div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Real-time defect detection for dents, scratches, poor assembly & more</div>
+                         <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Packaging integrity checks to reduce in-transit damage</div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()} Document and invoice validation for smoother customs clearance</div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Geo-tagged photo audits to verify inspections happen on-site </div>
                     </div>
                     <div className="flex flex-col bg-[#F5F5F5] items-center gap-8 md:py-12 px-5 py-6 md:rounded-[40px] rounded-[20px]">
                    <div className="flex flex-col gap-8 items-center">

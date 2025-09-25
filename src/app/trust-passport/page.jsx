@@ -18,7 +18,7 @@ const TrustPassport = () => {
             <div className='flex flex-col gap-10 justify-center '>
                 <p className='lg:text-[72px] md:text-[48px] text-[32px] font-[700] text-[#1A1A1A] text-center leading-[120%]'> Trust Passport</p>
                 <div className='flex justify-center w-full h-[460px]'>
-                <Image src={'/assets/trust-passport.png'} alt='mettrade-ai' width={1000} height={1000} className='w-full h-full object-cover md:rounded-[24px] rounded-[8px]' /></div>
+                <Image src={'/assets/trust-passport.png'} alt='trust-passport' width={1000} height={1000} className='w-full h-full object-cover md:rounded-[24px] rounded-[8px]' /></div>
                 <div className='flex flex-col gap-2'>
                     <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[120%] text-center sm:text-left'>OVERVIEW</p>
                     <p className='md:text-[24px] text-[16px]  text-[#808080] leading-[150%] text-center sm:text-left'>
@@ -38,7 +38,7 @@ const TrustPassport = () => {
                     </div>  
                     <div className='flex flex-col gap-2 '>
                         <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[120%]'>WHO IS IT FOR?</p>
-                        <p className='flex  items-start md:items-center gap-2 text-[#808080] '> {bulletpoints()}Logistics teams, sourcing agents, and compliance officers who need reliable QC documentation on demand.</p>
+                        <div className='flex  items-start md:items-center gap-2 text-[#808080] '> {bulletpoints()}Logistics teams, sourcing agents, and compliance officers who need reliable QC documentation on demand.</div>
                        
                     </div>
                     <div></div>

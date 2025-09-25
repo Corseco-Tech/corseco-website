@@ -28,11 +28,11 @@ const ScrapAndMetals = () => {
                  </div>
                  <div className='flex flex-col  gap-20'>
                 <div className= "flex flex-wrap items-center justify-center gap-10">
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()} Automated ISRI-grade classification of ferrous & non-ferrous scrap</p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()} Image-based verification of material type, purity, and contamination</p>
-                         <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Real-time document validation for compliance and export clearance</p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()} Geo-tagged inspections to prove load authenticity and on-site checks </p>
-                        <p className='flex items-start md:items-center gap-2'> {bulletpoints()}Digital audit trails to resolve disputes and build buyer confidence </p>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()} Automated ISRI-grade classification of ferrous & non-ferrous scrap</div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()} Image-based verification of material type, purity, and contamination</div>
+                         <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Real-time document validation for compliance and export clearance</div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()} Geo-tagged inspections to prove load authenticity and on-site checks </div>
+                        <div className='flex items-start md:items-center gap-2'> {bulletpoints()}Digital audit trails to resolve disputes and build buyer confidence </div>
                     </div>
                     <div className="flex flex-col bg-[#F5F5F5] items-center gap-8 md:py-12 px-5 py-6 md:rounded-[40px] rounded-[20px]">
                    <div className="flex flex-col gap-8 items-center">

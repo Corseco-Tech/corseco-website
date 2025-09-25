@@ -37,7 +37,7 @@ const MettradeAi = () => {
                     </div>  
                     <div className='flex flex-col gap-2 '>
                         <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[120%]'>WHO IS IT FOR?</p>
-                        <p className='flex  items-start md:items-center gap-2 text-[#808080] '> {bulletpoints()} Ideal for exporters, manufacturers, and buyers who want scalable, consistent, and fast QC across global shipments.</p>
+                        <div className='flex  items-start md:items-center gap-2 text-[#808080] '> {bulletpoints()} Ideal for exporters, manufacturers, and buyers who want scalable, consistent, and fast QC across global shipments.</div>
                        
                     </div>
                     <div></div>
