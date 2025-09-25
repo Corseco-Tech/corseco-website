@@ -35,7 +35,7 @@ export default function Home() {
       {/* GITEX Banner */}
       <section className="bg-white py-8 px-5">
         <div className="text-center">
-          <h2 className="text-xl font-bold mb-4">We're excited to announce that Corseco.tech will be at North Star!</h2>
+          <h2 className="text-xl font-bold mb-4">We&apos;re excited to announce that Corseco.tech will be at North Star!</h2>
           <Image 
             src="/assets/gitex-web-banner.jpg" 
             alt="Expand North Star 2025"
