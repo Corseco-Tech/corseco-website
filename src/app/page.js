@@ -1,5 +1,5 @@
 import Companies from "@/components/companies";
-import Descriptions from "@/components/descriptions";
+import Descriptions from "@/components/Descriptions";
 import FAQs from "@/components/faqs";
 import Header from "@/components/header";
 import Qualitycheck from "@/components/quality-check";
@@ -30,6 +30,22 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* GITEX Banner */}
+      <section className="bg-white py-8 px-5">
+        <div className="text-center">
+          <h2 className="text-xl font-bold mb-4">We're excited to announce that Corseco.tech will be at North Star!</h2>
+          <Image 
+            src="/assets/gitex-web-banner.jpg" 
+            alt="Expand North Star 2025"
+            width={728}
+            height={90}
+            className="mx-auto rounded"
+          />
+          <p className="mt-4 text-sm text-gray-600">Visit us at Stand H10-C80 • Oct 12-15, 2025 • Dubai Harbour</p>
+        </div>
+      </section>
+      
       <Companies />
       <Qualitycheck />
        <div className="flex lg:px-30 md:px-15 px-5 md:py-10 py-5 flex-col gap-10 bg-[#F5F5F5]">
