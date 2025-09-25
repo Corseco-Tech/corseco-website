@@ -15,6 +15,7 @@ const Header = () => {
   const router = useRouter()
   const headerRef = useRef(null)
   const pathname = usePathname()
+  const isHome = pathname === '/'
   // Function to close all dropdowns
   const closeAllDropdowns = () => {
     setSolutionsOpen(false)
@@ -72,7 +73,7 @@ const Header = () => {
   const SolutionsDropdown = () => (
     <div className="relative cursor-pointer">
       <button 
-        className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors text-[#1A1A1A]"
+        className={"flex items-center gap-1 cursor-pointer transition-colors text-[#1A1A1A] hover:text-gray-600"}
         onClick={() => solutionsOpen ? closeAllDropdowns() : toggleDropdown('solutions')}
         onBlur={() => setTimeout(() => setSolutionsOpen(false), 150)}
       >
@@ -631,8 +632,8 @@ const Header = () => {
   )
   
   return (
-    <div ref={headerRef} className='xl:px-30  md:px-10 mt-5 sticky top-5 z-50 '>
-    <div className='flex justify-between items-center gap-5 w-full   p-4 bg-white rounded-[16px] text-[#1A1A1A] border-[#F5F5F5] border-[2px] '>
+    <div ref={headerRef} className='sticky top-0 z-50 w-full'>
+    <div className={'flex justify-between items-center gap-5 w-full p-4 bg-white text-[#1A1A1A] border-b border-[#F5F5F5]'}>
       <div onClick={() => router.push('/')} className='flex items-center gap-2'>
         <Image src={'/logo.png'} height={80} width={160} alt='logo' />
         {/* <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[150%]'>Corseco.tech</p> */}
@@ -643,7 +644,7 @@ const Header = () => {
         <SolutionsDropdown />
 
         {/* About us - direct link */}
-        <Link href="/about" className="cursor-pointer hover:text-gray-600 text-base transition-colors" onClick={closeAllDropdowns}>
+        <Link href="/about" className={'cursor-pointer text-base transition-colors hover:text-gray-600'} onClick={closeAllDropdowns}>
           About us
         </Link>
 
@@ -665,7 +666,7 @@ const Header = () => {
         router.push('/booking')
         setLoading(false)   
       }} 
-        className=' items-center cursor-pointer justify-center gap-2 p-2 border border-[#808080] hidden lg:flex rounded-[8px] w-[266px] h-[48px] bg-[#F5F5F5]  hover:bg-gray-200'>
+        className={' items-center cursor-pointer justify-center gap-2 p-2 hidden lg:flex rounded-[8px] w-[266px] h-[48px] border bg-[#F5F5F5] border-[#808080] hover:bg-gray-200'}>
         <p className='font-[700] text-[24px]  leading-[150%] text-[#1A1A1A]'>Book Demo</p>
         {
           loading ? (
