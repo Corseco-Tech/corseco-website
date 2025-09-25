@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Button } from './ui/button'
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import CustomCard from './customcard';
+import CustomCard from './custom-card';
 
 
 const cards = [

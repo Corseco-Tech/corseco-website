@@ -271,12 +271,12 @@ const Header = () => {
       </button>
       {supportOpen && (
         <div className='absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-[200px]'>
-          <Link href="/contactus" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+          <Link href="/contact-us" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <p className='flex items-center text-[#808080] gap-2'> <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path d="M3.84216 11.3333H13.3335V3.33333H2.66683V12.2567L3.84216 11.3333ZM4.3035 12.6667L1.3335 15V2.66667C1.3335 2.48986 1.40373 2.32029 1.52876 2.19526C1.65378 2.07024 1.82335 2 2.00016 2H14.0002C14.177 2 14.3465 2.07024 14.4716 2.19526C14.5966 2.32029 14.6668 2.48986 14.6668 2.66667V12C14.6668 12.1768 14.5966 12.3464 14.4716 12.4714C14.3465 12.5964 14.177 12.6667 14.0002 12.6667H4.3035ZM7.3335 9.33333H8.66683V10.6667H7.3335V9.33333ZM5.7115 5.87533C5.79811 5.44186 6.00604 5.0419 6.31109 4.72198C6.61614 4.40207 7.00577 4.17536 7.43464 4.06824C7.8635 3.96112 8.31397 3.97798 8.73362 4.11688C9.15328 4.25577 9.52486 4.51098 9.80513 4.85281C10.0854 5.19464 10.2628 5.60904 10.3168 6.04777C10.3708 6.48651 10.299 6.93155 10.1099 7.3311C9.92082 7.73065 9.62215 8.06829 9.24866 8.30473C8.87516 8.54117 8.4422 8.66668 8.00016 8.66667H7.3335V7.33333H8.00016C8.18955 7.33332 8.37504 7.27953 8.53505 7.17822C8.69506 7.07691 8.82301 6.93224 8.90401 6.76106C8.98501 6.58987 9.01574 6.3992 8.99262 6.21123C8.96949 6.02326 8.89347 5.84572 8.77338 5.69927C8.6533 5.55283 8.4941 5.44349 8.31431 5.38398C8.13452 5.32447 7.94152 5.31725 7.75778 5.36314C7.57404 5.40903 7.40711 5.50615 7.27641 5.64321C7.14571 5.78027 7.05662 5.95162 7.0195 6.13733L5.7115 5.87533V5.87533Z" fill="#808080"/>
 </svg></span>Contact Us</p>
           </Link>
-          <Link href="/helpcenter" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+          <Link href="/help-center" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
             <p className='flex items-center text-[#808080] gap-2'><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path d="M1.3335 5.99601C1.33315 5.47081 1.4364 4.9507 1.63734 4.46546C1.83829 3.98023 2.13297 3.53939 2.50453 3.16821C2.87609 2.79702 3.31721 2.50278 3.80265 2.30232C4.28809 2.10186 4.8083 1.99913 5.3335 2.00001H10.6668C12.8755 2.00001 14.6668 3.79667 14.6668 5.99601V14H5.3335C3.12483 14 1.3335 12.2033 1.3335 10.004V5.99601ZM13.3335 12.6667V5.99601C13.3317 5.28967 13.0501 4.61283 12.5503 4.11375C12.0504 3.61467 11.3732 3.33404 10.6668 3.33334H5.3335C4.9834 3.33246 4.63657 3.4007 4.31289 3.53416C3.98922 3.66761 3.69508 3.86364 3.44734 4.11102C3.19959 4.35839 3.00312 4.65224 2.86918 4.97571C2.73524 5.29918 2.66648 5.6459 2.66683 5.99601V10.004C2.66859 10.7103 2.95024 11.3872 3.45007 11.8863C3.9499 12.3853 4.62716 12.666 5.3335 12.6667H13.3335ZM9.3335 7.33334H10.6668V8.66667H9.3335V7.33334ZM5.3335 7.33334H6.66683V8.66667H5.3335V7.33334Z" fill="#808080"/>
 </svg></span>Help Center</p>
@@ -303,7 +303,7 @@ const Header = () => {
       {industriesOpen && (
         <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-[300px]">
           <div className="p-4">
-            <Link href="scrapandmetals" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
+            <Link href="scrap-and-metals" className="flex items-center hover:bg-gray-50 gap-2 p-3 rounded" onClick={closeAllDropdowns}>
               <div className='bg-[#F5F5F5] rounded-full p-2'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path d="M15.2459 11.8879L13.0875 13.1347L12.8218 12.9808V13.2887L10.6633 14.5324L0.761415 8.77849V8.31963L1.6399 7.81246L1.63688 7.17246L0.755371 6.65925V6.20038L2.14706 5.39737L1.96594 5.2917L1.96292 4.83585L2.84442 4.32566L2.84142 3.68566L1.9599 3.17246L1.95687 2.71359L4.11537 1.4668L14.0173 7.22378L14.0203 7.68265L13.2233 8.14151L15.2369 9.30981L15.2399 9.76868L14.3584 10.2759L14.3614 10.9189L15.2429 11.4321L15.2459 11.8879Z" fill="#1D2943"/>
@@ -794,10 +794,10 @@ const Header = () => {
                     </button>
                     {supportOpen && (
                       <div className="space-y-2 ml-4">
-                        <Link href="/contactus" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
+                        <Link href="/contact-us" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           Contact Us
                         </Link>
-                        <Link href="/helpcenter" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
+                        <Link href="/help-center" className="block py-2 text-gray-600" onClick={closeMobileMenu}>
                           Help Center
                         </Link>
                       </div>

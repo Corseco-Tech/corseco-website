@@ -1,7 +1,7 @@
 'use client';
 
 import axios from "axios";
-import ENDPOINTS, { baseURL } from "./apiConfig";
+import ENDPOINTS, { baseURL } from "./api-config";
 
 const Axios = axios.create({
   baseURL,

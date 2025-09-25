@@ -1,11 +1,11 @@
 import Companies from "@/components/companies";
-import Descriptions from "@/components/Descriptions";
-import FAQs from "@/components/FAQs";
+import Descriptions from "@/components/descriptions";
+import FAQs from "@/components/faqs";
 import Header from "@/components/header";
-import Qualitycheck from "@/components/Qualitycheck";
-import ShipmentVerification from "@/components/shipmentVerification";
-import Tradeintelligence from "@/components/tradeintelligence";
-import Transformshippingexperiance from "@/components/transformshippingexperiance";
+import Qualitycheck from "@/components/qualitycheck";
+import ShipmentVerification from "@/components/shipment-verification";
+import Tradeintelligence from "@/components/trade-intelligence";
+import Transformshippingexperiance from "@/components/transform-shipping-experiance";
 import Image from "next/image";
 
 export default function Home() {

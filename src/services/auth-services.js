@@ -1,5 +1,5 @@
 import Axios from "../lib/axios";
-import ENDPOINTS from "../lib/apiConfig";
+import ENDPOINTS from "../lib/api-config";
 
 const login = async (email, password) => {
   const res = await Axios({

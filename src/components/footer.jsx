@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
                 <div className='flex flex-col text-center md:text-left gap-2'>
                     <h3 className='text-[24px] font-bold leading-[150%] '>Industries</h3>
-                    <p  onClick={()=>router.push('/scrapandmetals')} className='text-[16px]  hover:text-blue-400 cursor-pointer leading-[150%] '>Scrap</p>
+                    <p  onClick={()=>router.push('/scrap-and-metals')} className='text-[16px]  hover:text-blue-400 cursor-pointer leading-[150%] '>Scrap</p>
                     <p  onClick={()=>router.push('/furniture')} className='text-[16px] hover:text-blue-400 cursor-pointer leading-[150%] '>Furniture</p>
                     <p  onClick={()=>router.push('/construction')} className='text-[16px] hover:text-blue-400 cursor-pointer leading-[150%] '>Construction</p>
                 </div>

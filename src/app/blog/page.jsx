@@ -1,5 +1,5 @@
 'use client'
-import CustomCard from '@/components/customcard'
+import CustomCard from '@/components/custom-card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input';
 import { ChevronLeft, ChevronRight } from 'lucide-react';

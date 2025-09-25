@@ -1,4 +1,4 @@
-import Transformshippingexperiance from '@/components/transformshippingexperiance'
+import Transformshippingexperiance from '@/components/transform-shipping-experiance'
 import Image from 'next/image'
 import React from 'react'
 
