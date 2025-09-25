@@ -4,6 +4,7 @@ import FAQs from "@/components/faqs";
 import Header from "@/components/header";
 import Qualitycheck from "@/components/quality-check";
 import ShipmentVerification from "@/components/shipment-verification";
+import Testimonials from "@/components/testimonials";
 import Tradeintelligence from "@/components/trade-intelligence";
 import Transformshippingexperiance from "@/components/transform-shipping-experiance";
 import Image from "next/image";
@@ -68,44 +69,7 @@ export default function Home() {
        </div>
        <Descriptions/>
        <ShipmentVerification/>
-         <div className="lg:px-30 md:px-15 px-5 md:py-20 py-10  bg-white flex flex-col gap-10 ">
-            <div className="flex flex-col lg:max-w-2/3 max-w-full gap-4 ">
-              <p className="md:text-[40px] text-[24px]  font-[700] leading-[120%]">Trusted by industry leaders</p>
-              <p className="md:text-[24px] text-base text-[#808080]   leading-[150%]">See how businesses use our platform to secure shipments and eliminate uncertainty in global trade.</p>
-            </div>
-            <div className="flex flex-wrap md:flex-row md:justify-center items-center  gap-6 gap-y-5 flex-col  ">
-               <div className="flex flex-col sm:w-[336px] w-full gap-16 p-6 border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
-                  <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
-                  <div className="flex items-center gap-3">
-                    <Image src={'/team/profile3.png'} width={80} height={80} alt={'customer profile'} />
-                      <div>
-                           <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
-                            <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
-                      </div>
-                  </div>
-               </div>
-                <div className="flex flex-col  sm:w-[336px] w-full gap-16 p-6 border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
-                  <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
-                  <div className="flex items-center gap-3">
-                    <Image src={'/team/profile3.png'} width={80} height={80} alt={'customer profile'} />
-                      <div>
-                           <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
-                            <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
-                      </div>
-                  </div>
-               </div>
-                <div className="flex flex-col   sm:w-[336px] w-full gap-16 p-6  border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
-                  <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
-                  <div className="flex items-center gap-3">
-                    <Image src={'/team/profile3.png'} width={80} height={80} alt={'customer profile'} />
-                      <div>
-                           <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
-                            <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
-                      </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+         <Testimonials />
          <Tradeintelligence/>
          <FAQs/>
          <div className="lg:px-30 md:px-15 px-5 md:py-10 py-5">
