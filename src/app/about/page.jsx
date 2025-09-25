@@ -134,7 +134,7 @@ const AboutUs = () => {
           </div>
             <div className='flex  flex-col gap-4 order-1 lg:order-2'>
                <div className='w-fit mx-auto md:p-5 p-2 rounded-[24px] bg-white border-[4px] border-[#F5F5F5]'>
-                <Image src="/team/vivek.png" alt="aboutus" width={441} height={441} responsive={true} className='rounded-[14px]' />
+                <Image src="/team/vivek.png" alt="aboutus" width={441} height={441} responsive="true" className='rounded-[14px]' />
                 </div>
                <div className='flex flex-col gap-2 justify-center items-center'>
                 <p className='text-[24px] font-bold leading-[150%]'>Vivek Singh</p>
@@ -146,7 +146,7 @@ const AboutUs = () => {
             {
                 data.map((item)=>(
                     <div key={item.id} className='flex flex-col gap-6 justify-center  pb-7 border border-[#808080] rounded-[16px]   max-w-[280px] md:max-w-[344px]'>
-                        <div className='w-full '><Image src={item.image} alt={item.name} width={384} height={384} responsive={true} className='rounded-[14px] w-full ' /></div>
+                        <div className='w-full '><Image src={item.image} alt={item.name} width={384} height={384} responsive="true" className='rounded-[14px] w-full ' /></div>
                        <div className='flex flex-col gap-2 justify-center items-start px-5'>
                         <p className='text-[24px] font-bold leading-[150%]'>{item.name}</p>
                         <p className='text-[#808080]  leading-[150%]'>{item.designation}</p>
@@ -164,7 +164,7 @@ const AboutUs = () => {
                 boardofadvisors.map((item)=>(
                     <div key={item.id} className='flex flex-col gap-6   pb-7 border border-[#808080] rounded-[16px] shrink-0  md:w-[398px] self-stretch  w-[200px] '>
                         <div className='w-full   max-h-[140px] md:min-h-[287px]  min-h-[140px]'>
-                            <Image src={item.image} alt={item.name} width={398} height={398} responsive={true} className='rounded-[14px] w-full h-full  object-scale-down' /></div>
+                            <Image src={item.image} alt={item.name} width={398} height={398} responsive="true" className='rounded-[14px] w-full h-full  object-scale-down' /></div>
                        <div className='flex flex-col gap-2  items-start h-full px-5'>
                         <p className='md:text-[24px] text-base font-bold leading-[150%] '>{item.name}</p>
                         <p className='text-[#808080] md:text-base text-xs leading-[150%] '>{item.designation}</p>
