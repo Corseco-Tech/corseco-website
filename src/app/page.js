@@ -2,7 +2,7 @@ import Companies from "@/components/companies";
 import Descriptions from "@/components/descriptions";
 import FAQs from "@/components/faqs";
 import Header from "@/components/header";
-import Qualitycheck from "@/components/qualitycheck";
+import Qualitycheck from "@/components/quality-check";
 import ShipmentVerification from "@/components/shipment-verification";
 import Tradeintelligence from "@/components/trade-intelligence";
 import Transformshippingexperiance from "@/components/transform-shipping-experiance";
@@ -61,7 +61,7 @@ export default function Home() {
                <div className="flex flex-col sm:w-[336px] w-full gap-16 p-6 border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
                   <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
                   <div className="flex items-center gap-3">
-                    <Image src={'/team/profile3.png'} width={80} height={80} />
+                    <Image src={'/team/profile3.png'} width={80} height={80} alt={'customer profile'} />
                       <div>
                            <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
                             <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
@@ -71,7 +71,7 @@ export default function Home() {
                 <div className="flex flex-col  sm:w-[336px] w-full gap-16 p-6 border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
                   <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
                   <div className="flex items-center gap-3">
-                    <Image src={'/team/profile3.png'} width={80} height={80} />
+                    <Image src={'/team/profile3.png'} width={80} height={80} alt={'customer profile'} />
                       <div>
                            <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
                             <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
@@ -81,7 +81,7 @@ export default function Home() {
                 <div className="flex flex-col   sm:w-[336px] w-full gap-16 p-6  border-[2px] border-[#F5F5F5] shadow-[0_2px_4px_0_rgba(245,245,245,0.5)] rounded-[8px] ">
                   <p>Coreseco.tech flagged hidden defects instantly. Every container now meets our standards before shipping.</p>
                   <div className="flex items-center gap-3">
-                    <Image src={'/team/profile3.png'} width={80} height={80} />
+                    <Image src={'/team/profile3.png'} width={80} height={80} alt={'customer profile'} />
                       <div>
                            <p className="text-[24px]  font-[700] leading-[120%]">John Doe</p>
                             <p className="text-[16px]  text-[#808080] leading-[150%]">CEO, JD Global</p>
