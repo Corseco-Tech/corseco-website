@@ -20,7 +20,7 @@ const ScrapAndMetals = () => {
             <div className='flex flex-col gap-10 justify-center '>
                 <p className='lg:text-[72px] md:text-[48px] text-[32px] font-[700] text-[#1A1A1A] text-center leading-[120%]'>Scrap & Metals</p>
                 <div className='flex justify-center w-full h-[460px]'>
-                <Image src={'/images/scrapandmetals.png'} alt='scrapandmetals' width={1000} height={1000} className='w-full h-full object-cover md:rounded-[24px] rounded-[8px]' /></div>
+                <Image src={'/assets/scrap-and-metals.png'} alt='scrapandmetals' width={1000} height={1000} className='w-full h-full object-cover md:rounded-[24px] rounded-[8px]' /></div>
                 <div className='flex flex-col gap-2'>
                    
                     <p className='md:text-[24px] text-[16px]  text-[#808080] leading-[150%] text-center sm:text-left'> Ensure every load meets industry standards with AI-powered scrap verification. Our system grades ferrous and non-ferrous metals using ISRI specifications, detecting contamination, mix-ups, and mislabels instantly. From clean copper to shredded steel, get real-time grading, visual proof, and traceable QC reports—before materials move. No guesswork. Just verified value.</p>

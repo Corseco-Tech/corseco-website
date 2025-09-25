@@ -14,12 +14,12 @@ const Descriptions = () => {
                  Just fast, consistent, and verifiable quality—on every shipment, anywhere in the world.</p>
           </div>
           <div className='lg:w-1/2 w-full flex lg:justify-end justify-center order-1 lg:order-2'>
-            <Image src={'/images/qual;ityverification.png'} width={600} height={459} alt='qualitycheck' className='rounded-[20px]' />
+            <Image src={'/assets/quality-verification.png'} width={600} height={459} alt='qualitycheck' className='rounded-[20px]' />
           </div>
       </div>
         <div className='flex lg:flex-row flex-col items-center gap-6'>
             <div className=' sm:p-10 p-5 flex flex-col gap-6 lg:w-1/2 w-full  bg-[#F0F0F0] md:rounded-[40px] rounded-[20px] self-stretch '>
-                <Image src={'/images/imageauthentication.png'} width={453} height={453} className='w-full rounded-[20px]' />
+                <Image src={'/assets/image-authentication.png'} width={453} height={453} className='w-full rounded-[20px]' />
                 <p  className=' font-bold md:text-[40px] text-[16px] leading-[120%] md:text-left text-center' >Image authentication - Expose fakes, ensure integrity</p>
                 <p  className=' text-[#808080] sm:text-base text-xs leading-[150%]' >Every shipment is image-authenticated in real time using AI-powered computer vision. Our system scans 
                     and compares photos of goods, packaging, and labels against verified benchmarks—exposing fake, swapped, 
@@ -28,7 +28,7 @@ const Descriptions = () => {
                      intact, and exactly what you paid for. Integrity you can see. Fraud you can stop—before it ships.</p>
             </div>
              <div className='sm:p-10 p-5 flex flex-col gap-6 lg:w-1/2 w-full  bg-[#F0F0F0] md:rounded-[40px] rounded-[20px] self-stretch '>
-                <Image src={'/images/documentvalidation.png'} width={453} height={453} className='w-full rounded-[20px]' />
+                <Image src={'/assets/document-validation.png'} width={453} height={453} className='w-full rounded-[20px]' />
                 <p  className=' font-bold md:text-[40px] text-[16px] leading-[120%] md:text-left text-center' >Document validation - Paperwork matched, risk removed.</p>
                 <p  className=' text-[#808080] sm:text-base text-xs leading-[150%]' >Our AI validates shipping documents the moment they’re uploaded—flagging discrepancies, missing fields, and forged entries in seconds. From invoices and packing lists to inspection reports and compliance certificates, we cross-check every detail against known data and shipment records. No more manual paperwork reviews or risky assumptions. Just instant confidence that your documents are accurate, authentic, and audit-ready.</p>
             </div>

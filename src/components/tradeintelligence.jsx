@@ -12,7 +12,7 @@ const cards = [
       date: 'JULY 26, 2025',
       title: 'AI grades scrap with precision',
       description: 'Automated grading boosts accuracy and trust for global scrap trade.',
-      imageSrc: '/images/qualitycontrol.png',
+      imageSrc: '/assets/quality-control.png',
       imageAlt: 'qc'
     },
     {
@@ -20,7 +20,7 @@ const cards = [
       date: 'JULY 26, 2025',
       title: 'Compliance, automated and assured',
       description: 'AI parsing eliminates manual errors and keeps you audit-ready.',
-      imageSrc: '/images/documentparsing.png',
+      imageSrc: '/assets/document-parsing.png',
       imageAlt: 'qc'
     },
     {
@@ -28,7 +28,7 @@ const cards = [
       date: 'JULY 26, 2025',
       title: 'Spot image fraud before it costs you',
       description: 'Forensic analysis exposes tampering and prevents costly disputes.',
-      imageSrc: '/images/forensics.png',
+      imageSrc: '/assets/forensics.png',
       imageAlt: 'qc'
     }
   ];

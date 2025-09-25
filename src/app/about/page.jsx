@@ -8,7 +8,7 @@ const data=[
         id:1,
         name:"Sachin Dubeydi",
         designation:"CFO",
-        image:"/images/sachin.png"
+        image:"/team/sachin.png"
     },
     // {
     //     id:2,
@@ -20,13 +20,13 @@ const data=[
         id:3,
         name:" Jorlin Rafarero",
         designation:"Partner, Canada",
-        image:"/images/jorlin.png"
+        image:"/team/jorlin-rafaero.jpg"
     },
     {
         id:4,
         name:"Kayode Bamidele",
         designation:"Product Designer",
-        image:"/images/kayode.png"
+        image:"/team/kayode.png"
     },
     
 ]
@@ -35,13 +35,13 @@ const boardofadvisors=[
         id:1,
         name:"Spondon Dey",
         designation:"Chief Executive Officer of AT&T Innovation Network, AT&T",
-        image:"/images/spandan.png"
+        image:"/team/spandan.png"
     },
     {
         id:2,
         name:"Jitendra Srivastava",
         designation:"Bluewaterworks",
-        image:"/images/jitendra.png"
+        image:"/team/jitendra.jpg"
     },
     // {
     //     id:3,
@@ -53,31 +53,31 @@ const boardofadvisors=[
         id:4,
         name:" Adarsh jain",
         designation:"CEO, Proact ai ",
-        image:"/images/adarsh.png"
+        image:"/team/adarsh.png"
     },
     {
         id:5,
         name:"Kumar Ranagarajan",
         designation:"CEO, Slang Labs",
-        image:"/images/kumar.png"
+        image:"/team/kumar.png"
     },
     {
         id:6,
         name:"Siddhartha Chauahan",
         designation:"Calsys India Pvt. Ltd.",
-        image:"/images/siddartha.jpeg"
+        image:"/team/siddartha.jpeg"
     },
        {
         id:7,
         name:"Aditya Pratap Singh",
         designation:"Barclays",
-        image:"/images/Akku.jpeg"
+        image:"/team/aditya.jpeg"
     },
       {
         id:8,
         name:"AI Venture Lab",
         designation:"INSEAD x AI Venture Lab",
-        image:"/images/AI_VENTURE_LAB.png"
+        image:"/team/AI_VENTURE_LAB.png"
     }
 
 ]
@@ -86,7 +86,7 @@ const AboutUs = () => {
     <div className='flex flex-col gap-20'>
     < div className=' xl:px-30 lg:px-20 md:px-10 px-5 flex flex-col gap-20'>
         <div className='h-[500px] mt-20'>
-    <div  className="bg-[url('/images/aboutusimage.png')] bg-cover object-cover bg-center bg-no-repeat  h-full md:rounded-[40px] rounded-[20px]">
+    <div  className="bg-[url('/assets/about-us-image.png')] bg-cover object-cover bg-center bg-no-repeat  h-full md:rounded-[40px] rounded-[20px]">
             <div className='flex flex-col justify-center md:p-17 p-5 gap-4 text-white h-[100%] w-full'>
               <p className='md:text-[72px] text-[40px] font-bold leading-[120%]'>About us</p>
               <p className='md:text-[24px] text-base font-medium leading-[150%] md:w-2/3 w-full'>AI-driven QC for global shipments, Instantly verify goods, documents and locations - no delays, no uncertainty.</p>  
@@ -134,7 +134,7 @@ const AboutUs = () => {
           </div>
             <div className='flex  flex-col gap-4 order-1 lg:order-2'>
                <div className='w-fit mx-auto md:p-5 p-2 rounded-[24px] bg-white border-[4px] border-[#F5F5F5]'>
-                <Image src="/images/Vivek.jpg" alt="aboutus" width={441} height={441} responsive={true} className='rounded-[14px]' />
+                <Image src="/team/vivek.png" alt="aboutus" width={441} height={441} responsive={true} className='rounded-[14px]' />
                 </div>
                <div className='flex flex-col gap-2 justify-center items-center'>
                 <p className='text-[24px] font-bold leading-[150%]'>Vivek Singh</p>

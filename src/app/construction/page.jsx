@@ -20,7 +20,7 @@ const ScrapAndMetals = () => {
             <div className='flex flex-col gap-10 justify-center '>
                 <p className='lg:text-[72px] md:text-[48px] text-[32px] font-[700] text-[#1A1A1A] text-center leading-[120%]'>Construction</p>
                 <div className='flex justify-center w-full h-[460px]'>
-                <Image src={'/images/construction.png'} alt='construction' width={1000} height={1000} className='w-full h-full object-cover md:rounded-[24px] rounded-[8px]' /></div>
+                <Image src={'/assets/construction.png'} alt='construction' width={1000} height={1000} className='w-full h-full object-cover md:rounded-[24px] rounded-[8px]' /></div>
                 <div className='flex flex-col gap-2'>
                    
                     <p className='md:text-[24px] text-[16px]  text-[#808080] leading-[150%] text-center sm:text-left'>In construction, delays and defects aren’t just costly—they’re dangerous. Corseco Tech brings instant, AI-driven verification to your global supply chain, so every shipment of materials or equipment is exactly what your site needs—verified, compliant, and on time.</p>

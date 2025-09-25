@@ -111,7 +111,7 @@ const ShipmentVerification = () => {
     </div>
                 </div>
                 <div className='md:w-1/2 w-full order-1 md:order-2 flex justify-end'>
-                  <Image src={'/images/shipmentverification.png'} width={600} height={459} alt='qualitycheck' className='rounded-[20px]' />
+                  <Image src={'/assets/shipment-verification.png'} width={600} height={459} alt='qualitycheck' className='rounded-[20px]' />
                 </div>
             </div>
             </div>

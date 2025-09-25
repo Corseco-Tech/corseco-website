@@ -634,7 +634,7 @@ const Header = () => {
     <div ref={headerRef} className='xl:px-30  md:px-10 mt-5 sticky top-5 z-50 '>
     <div className='flex justify-between items-center gap-5 w-full   p-4 bg-white rounded-[16px] text-[#1A1A1A] border-[#F5F5F5] border-[2px] '>
       <div onClick={() => router.push('/')} className='flex items-center gap-2'>
-        <Image src={'/logo/corsecologo.png'} height={80} width={160} alt='logo' />
+        <Image src={'/logo.png'} height={80} width={160} alt='logo' />
         {/* <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[150%]'>Corseco.tech</p> */}
       </div>
       
@@ -696,7 +696,7 @@ const Header = () => {
               {/* Mobile Header */}
               <div className="flex justify-between items-center p-4 border-b">
                 <div onClick={() => router.push('/')} className='flex items-center gap-2 cursor-pointer'>
-                  <Image src={'/logo/corsecologo.png'} height={43} width={43} alt='logo' />
+                  <Image src={'/logo.png'} height={43} width={43} alt='logo' />
                   <p className='text-[24px] font-[700] text-[#1A1A1A] leading-[150%]'>Corseco.tech</p>
                 </div>
                 <button onClick={closeMobileMenu} className='cursor-pointer'>
