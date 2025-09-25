@@ -12,7 +12,7 @@ const Qualitycheck = () => {
         <div className='flex  justify-center flex-wrap gap-6'>
             <Card className={'w-[344px] border-[#F5F5F5] border-[4px]'}> 
                 <CardHeader>
-                    <Image src={'/assets/ai-inspection.png'} height={277} width={382} className='rounded-[20px]'/>
+                    <Image src={'/assets/ai-inspection.png'} height={277} width={382} className='rounded-[20px]' alt='ai inspection'/>
                 </CardHeader>
                 <CardContent>
                      <p className='md:text-[24px]  text-lg font-bold leading-[120%]'>AI - driven inspections</p>
@@ -21,7 +21,7 @@ const Qualitycheck = () => {
             </Card>
             <Card  className={'w-[344px]  border-[#F5F5F5] border-[4px]'}>
                 <CardHeader>
-                    <Image src={'/assets/image-authentication.png'} height={277} width={382} className='rounded-[20px]'/>
+                    <Image src={'/assets/image-authentication.png'} height={277} width={382} className='rounded-[20px]' alt='image authentication'/>
                 </CardHeader>
                 <CardContent>
                      <p className='md:text-[24px]  text-lg font-bold leading-[120%]'>Forensic photo validation</p>
@@ -30,7 +30,7 @@ const Qualitycheck = () => {
             </Card>
             <Card  className={'w-[344px]  border-[#F5F5F5] border-[4px]'}>
                 <CardHeader>
-                    <Image src={'/assets/docs-and-location-check.png'} height={277} width={382} className='rounded-[20px]'/>
+                    <Image src={'/assets/docs-and-location-check.png'} height={277} width={382} className='rounded-[20px]' alt='document and location check'/>
                 </CardHeader>
                 <CardContent>
                      <p className='md:text-[24px]  text-lg font-bold leading-[120%]'>Document & location checks</p>
