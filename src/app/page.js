@@ -1,6 +1,6 @@
 import Companies from "@/components/companies";
 import Descriptions from "@/components/Descriptions";
-import FAQs from "@/components/faqs";
+import FAQs from "@/components/FAQs";
 import Header from "@/components/header";
 import Qualitycheck from "@/components/quality-check";
 import ShipmentVerification from "@/components/shipment-verification";
