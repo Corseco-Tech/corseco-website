@@ -22,12 +22,12 @@ const data=[
         designation:"Partner, Canada",
         image:"/team/jorlin-rafaero.jpg"
     },
-    {
-        id:4,
-        name:"Kayode Bamidele",
-        designation:"Product Designer",
-        image:"/team/kayode.png"
-    },
+    // {
+    //     id:4,
+    //     name:"Kayode Bamidele",
+    //     designation:"Product Designer",
+    //     image:"/team/kayode.png"
+    // },
     
 ]
 const boardofadvisors=[
@@ -43,12 +43,12 @@ const boardofadvisors=[
         designation:"Bluewaterworks",
         image:"/team/jitendra.jpg"
     },
-    // {
-    //     id:3,
-    //     name:"Bahubali Shete",
-    //     designation:"CEO, Tiny chef",
-    //     image:"/images/bahubali.png"
-    // },
+    {
+        id:3,
+        name:"Prashant  Ghildiyal",
+        designation:"CO-Founder, Devtron",
+        image:"/team/prashant-ghildiyal.jpeg"
+    },
     {
         id:4,
         name:" Adarsh jain",
@@ -73,10 +73,10 @@ const boardofadvisors=[
         designation:"Barclays",
         image:"/team/aditya.jpeg"
     },
-      {
+    {
         id:8,
         name:"AI Venture Lab",
-        designation:"INSEAD x AI Venture Lab",
+        designation:"INSEAD x AI Venture Lab",
         image:"/team/AI_VENTURE_LAB.png"
     }
 
@@ -100,11 +100,11 @@ const AboutUs = () => {
                 Corseco Tech delivers AI-driven solutions that ensure your shipments meet the highest standards—every time.</p>
      </div>
     </div>
-    <div className="flex lg:px-30 md:px-15 px-5 md:py-10 py-5 flex-col gap-10 bg-[#F5F5F5]">
+    {/* <div className="flex lg:px-30 md:px-15 px-5 md:py-10 py-5 flex-col gap-10 bg-[#F5F5F5]">
          <p className="font-[700] md:text-[40px] text-[24px]  leading-[120%]  text-center">By the numbers</p>
          <div className="flex justify-between sm:gap-5 gap-0 items-center"> 
               <div className="flex flex-col gap-2 text-center">
-                <p className="sm:text-[32px]  text-lg font-[700] leading-[120%]">10,000 +</p>
+                <p className="sm:text-[32px]  text-lg font-[700] leading-[120%]">10 +</p>
                  <p className="sm:text-[24px] text-xs leading-[150%] text-[#808080]">customers</p>
               </div>
                <div className="flex flex-col gap-2 text-center">
@@ -117,7 +117,7 @@ const AboutUs = () => {
               </div>
               
          </div>
-       </div>
+    </div> */}
        <div className='flex flex-col gap-10 xl:px-30 lg:px-20 md:px-10 px-5'>
        <div className=' flex lg:flex-row flex-col gap-10 justify-between '>
           <div className='flex flex-col order-2 lg:order-1 gap-4 max-w-[588px] lg:mx-0 mx-auto'>
