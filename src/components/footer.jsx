@@ -46,7 +46,7 @@ const Footer = () => {
                     <h3 className='text-[24px] font-bold leading-[150%] '>Contact</h3>
                     <p  className='text-[16px]  leading-[150%] '>+91-98180 04499</p>
                     <p className='text-[16px]  leading-[150%] '>+1 705-3337229</p>
-                   <a href="mailto:vivek@corseco.tech"> <p className='text-[16px]  leading-[150%] '>Vivek@corseco.tech</p></a>
+                   <a href="mailto:vivek@corseco.tech"> <p className='text-[16px]  leading-[150%] '>vivek@corseco.tech</p></a>
 
                 </div>
             </div>

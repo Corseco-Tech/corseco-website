@@ -1,44 +1,79 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import React from 'react'
+import { Mail, Phone } from 'lucide-react'
 
 const Contactus = () => {
   return (
-      <div className='flex flex-col gap-10  bg-[#F5F5F5]'>
-       
-        <div className=' px-5 md:px-10 lg:px-20 xl:px-30 pt-5 md:pb-34 pb-10 gap-10 flex flex-col bg-white'>
-            <div className='h-[500px] '>
-                   <div  className="bg-[url('/assets/contact-us.jpg')] bg-cover object-cover bg-center bg-no-repeat  h-full rounded-[40px]">
-                       <div className='bg-black/50 h-full w-full flex flex-col justify-center rounded-[40px] p-10'>
-                         <p className='text-white text-[72px] font-bold'> Contact Us</p>
-                          <p className='text-white text-[24px] font-bold'>We are here to help</p>
-                        </div>    
-             </div>
-                        
-             </div>
-             <div className='flex flex-col   gap-10'>
-                 <div className='flex flex-col gap-4 text-center'> 
-                    <p className='text-[40px] font-bold leading-[120%]'>Support</p>
-                    <div className='flex flex-col' >
-                        <p className='text-[#808080]  leading-[125%]'>Monday - Friday: 10 am to 8 pm ET</p>
-                        <p className='text-[#808080]  leading-[120%]'>Saturday: 11 am to 7 pm ET</p>
-                    </div>
-                 </div>
-                 <div className='flex flex-col justify-center items-center gap-10 '>
-                    <p className='leading-[150%]'>We are here to answer any questions you may have.</p>
-                     <div className='text-[24px] font-bold leading-[150%] flex items-center gap-2 bg-[#F5F5F5] rounded-[10px] p-2 border border-[#808080] w-fit items-center justify-center'>
-                     Email Us <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-  <path d="M16.672 11.0002L11.308 5.63617L12.722 4.22217L20.5 12.0002L12.722 19.7782L11.308 18.3642L16.672 13.0002H4.5V11.0002H16.672Z" fill="#1A1A1A"/>
-</svg>
-                     </div>
-                    <p className='text-[24px] font-bold leading-[150%]'>Or call +91-98180 04499 / +1 705-3337229</p>
-                 </div>
-             </div>
-        </div> 
-        
+    <div className='min-h-screen bg-gray-50'>
+      {/* Hero Section */}
+      <div className='relative'>
+        <div className="bg-[url('/assets/contact-us.jpg')] bg-cover bg-center bg-no-repeat h-[500px] md:h-[600px]">
+          <div className='bg-black/50 h-full w-full flex flex-col justify-center items-center text-center px-4'>
+            <div className='max-w-4xl mx-auto'>
+              <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight'>
+                Contact Us
+              </h1>
+              <p className='text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto'>
+                Get in touch with us
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      
-      </div> 
+      {/* Main Content */}
+      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        {/* Contact Information */}
+        <div className='text-center mb-16'>
+          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-8'>
+            Get In Touch
+          </h2>
+          <p className='text-lg text-gray-600 mb-12'>
+            We are here to answer any questions you may have.
+          </p>
+        </div>
+
+        {/* Contact Methods */}
+        <div className='grid md:grid-cols-2 gap-8'>
+          {/* Email Contact */}
+          <div className='bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center'>
+            <div className='w-16 h-16 bg-gray-800 rounded-xl flex items-center justify-center mx-auto mb-6'>
+              <Mail className='w-8 h-8 text-white' />
+            </div>
+            <h3 className='text-xl font-semibold text-gray-900 mb-4'>Email</h3>
+            <a 
+              href="mailto:vivek@corseco.tech" 
+              className='text-lg text-gray-600 hover:text-gray-800 font-medium'
+            >
+              vivek@corseco.tech
+            </a>
+          </div>
+
+          {/* Phone Contact */}
+          <div className='bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center'>
+            <div className='w-16 h-16 bg-gray-800 rounded-xl flex items-center justify-center mx-auto mb-6'>
+              <Phone className='w-8 h-8 text-white' />
+            </div>
+            <h3 className='text-xl font-semibold text-gray-900 mb-4'>Phone</h3>
+            <div className='space-y-2'>
+              <a 
+                href="tel:+919818004499" 
+                className='block text-lg text-gray-600 hover:text-gray-800 font-medium'
+              >
+                +91-98180 04499
+              </a>
+              <a 
+                href="tel:+17053337229" 
+                className='block text-lg text-gray-600 hover:text-gray-800 font-medium'
+              >
+                +1 705-3337229
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
