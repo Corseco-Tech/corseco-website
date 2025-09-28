@@ -669,26 +669,36 @@ const Header = () => {
        
       </div>
        {
-        !HideBookButton ?(<Button onClick={()=>{
-          setLoading(true)
-        router.push('/booking')
-        setLoading(false)   
-      }} 
-        className={'items-center cursor-pointer justify-center gap-2 px-6 py-3 hidden lg:flex rounded-lg bg-[#072A54] hover:bg-[#0A3A6B] transition-all duration-200 shadow-sm hover:shadow-md'}>
-        <p className='font-semibold text-base text-white'>Book Demo</p>
-        {
-          loading ? (
-            <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>
-          ):(
-            (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
-           <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="white" />
-         </svg>
-           )
-          )
-        }
-       
-      </Button>):(<div> </div>)
+        !HideBookButton ?(
+        <div className="flex gap-3">
+          <Button onClick={()=>{
+            window.open('https://product.corseco.tech', '_blank')
+          }} 
+            className={'items-center cursor-pointer justify-center gap-2 px-4 py-2 hidden lg:flex rounded-lg bg-white text-[#072A54] hover:bg-gray-100 transition-all duration-200 shadow-sm hover:shadow-md border border-[#072A54]'}>
+            <p className='font-semibold text-sm'>Try It Now</p>
+          </Button>
+          <Button onClick={()=>{
+            setLoading(true)
+            router.push('/booking')
+            setLoading(false)   
+          }} 
+            className={'items-center cursor-pointer justify-center gap-2 px-6 py-3 hidden lg:flex rounded-lg bg-[#072A54] hover:bg-[#0A3A6B] transition-all duration-200 shadow-sm hover:shadow-md'}>
+            <p className='font-semibold text-base text-white'>Book Demo</p>
+            {
+              loading ? (
+                <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>
+              ):(
+                (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
+               <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="white" />
+             </svg>
+               )
+              )
+            }
+           
+          </Button>
+        </div>
+        ):(<div> </div>)
        }
       
       
@@ -815,31 +825,36 @@ const Header = () => {
                 </div>
               </div>
   
-              {/* Mobile BookDemo Button */}
-          <div  className='px-5 '>
+              {/* Mobile CTAs */}
+          <div className='px-5 space-y-2'>
+            <Button onClick={()=>{
+              window.open('https://product.corseco.tech', '_blank')
+            }} 
+              className='items-center cursor-pointer justify-center gap-2 p-2 border border-[#808080] w-full flex lg:hidden rounded-[8px] h-[48px] bg-white hover:bg-gray-100'>
+              <p className='font-[700] text-[24px] leading-[150%] text-[#1A1A1A]'>Try It Now</p>
+            </Button>
             
-            
-             <Button onClick={()=>{
-          setLoading(true)
-        router.push('/booking')
-        setLoading(false)   
-      }} 
-        className=' items-center cursor-pointer justify-center gap-2 p-2 border border-[#808080]   w-full flex lg:hidden rounded-[8px] mb-2 h-[48px] bg-[#F5F5F5]  hover:bg-gray-200'>
-        <p className='font-[700] text-[24px]  leading-[150%] text-[#1A1A1A]'>Book Demo</p>
-        {
-          loading ? (
-            <div className='animate-spin rounded-full h-6 w-6 border-b-2 border-gray-900'></div>
-          ):(
-            (
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-           <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="#1A1A1A" />
-         </svg>
-           )
-          )
-        }
-       
-      </Button>
-      </div>  
+            <Button onClick={()=>{
+              setLoading(true)
+              router.push('/booking')
+              setLoading(false)   
+            }} 
+              className='items-center cursor-pointer justify-center gap-2 p-2 border border-[#808080] w-full flex lg:hidden rounded-[8px] h-[48px] bg-[#F5F5F5] hover:bg-gray-200'>
+              <p className='font-[700] text-[24px] leading-[150%] text-[#1A1A1A]'>Book Demo</p>
+              {
+                loading ? (
+                  <div className='animate-spin rounded-full h-6 w-6 border-b-2 border-gray-900'></div>
+                ):(
+                  (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                 <path d="M16.672 11L11.308 5.63605L12.722 4.22205L20.5 12L12.722 19.778L11.308 18.364L16.672 13H4.5V11H16.672Z" fill="#1A1A1A" />
+               </svg>
+                 )
+                )
+              }
+             
+            </Button>
+          </div>  
             </div>
           </div>
         )}

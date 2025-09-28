@@ -1,3 +1,4 @@
+"use client";
 import Companies from "@/components/companies";
 import Descriptions from "@/components/Descriptions";
 import FAQs from "@/components/FAQs";
@@ -65,6 +66,16 @@ export default function Home() {
                  <p className="md:text-[16px] text-sm leading-[150%]">Time Saved</p>
               </div>
               
+         </div>
+         
+         {/* Statistics CTAs */}
+         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+           <button onClick={() => window.open('https://product.corseco.tech', '_blank')} className="bg-[#072A54] text-white hover:bg-[#0A3A6B] px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-md hover:shadow-lg">
+             Try It Now
+           </button>
+           <button onClick={() => window.location.href = '/booking'} className="bg-white text-[#072A54] hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold border border-[#072A54] transition-all duration-200 shadow-md hover:shadow-lg">
+             Book Demo
+           </button>
          </div>
        </div>
        <Descriptions/>
