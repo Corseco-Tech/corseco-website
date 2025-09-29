@@ -6,22 +6,24 @@ import Marquee from 'react-fast-marquee'
 const data=[
     {
         id:1,
-        name:"Sachin Dubeydi",
-        designation:"CFO",
-        image:"/team/sachin.png"
-    },
-    // {
-    //     id:2,
-    //     name:"Saneesh Cherian",
-    //     designation:"CMO",
-    //     image:"/images/saneesh.png"
-    // },
-    {
-        id:3,
         name:" Jorlin Rafarero",
         designation:"Partner, Canada",
         image:"/team/jorlin-rafaero.jpg"
     },
+    {
+        id:2,
+        name:"Spondon Dey",
+        designation:"Chief Strategy Officer",
+        image:"/team/spondon.png"
+    },
+    {
+        id:3,
+        name:"Sachin Dubeydi",
+        designation:"CFO",
+        image:"/team/sachin.png"
+    },
+
+    
     // {
     //     id:4,
     //     name:"Kayode Bamidele",
@@ -32,27 +34,21 @@ const data=[
 ]
 const boardofadvisors=[
     {
-        id:1,
-        name:"Spondon Dey",
-        designation:"Chief Executive Officer of AT&T Innovation Network, AT&T",
-        image:"/team/spandan.png"
-    },
-    {
         id:2,
         name:"Jitendra Srivastava",
-        designation:"Bluewaterworks",
+        designation:"Founder, Bluewaterworks",
         image:"/team/jitendra.jpg"
     },
     {
         id:3,
         name:"Prashant  Ghildiyal",
-        designation:"CO-Founder, Devtron",
+        designation:"Co-Founder, Devtron",
         image:"/team/prashant-ghildiyal.jpeg"
     },
     {
         id:4,
         name:" Adarsh jain",
-        designation:"CEO, Proact ai ",
+        designation:"CEO, Proact.ai",
         image:"/team/adarsh.png"
     },
     {
@@ -64,13 +60,13 @@ const boardofadvisors=[
     {
         id:6,
         name:"Siddhartha Chauahan",
-        designation:"Calsys India Pvt. Ltd.",
+        designation:"Founder, Calsys India Pvt. Ltd.",
         image:"/team/siddartha.jpeg"
     },
        {
         id:7,
         name:"Aditya Pratap Singh",
-        designation:"Barclays",
+        designation:"VP, Barclays",
         image:"/team/aditya.jpeg"
     },
     {
@@ -95,7 +91,7 @@ const AboutUs = () => {
     </div>
      <div className='flex flex-col justify-center items-center gap-4'>
              <p className='md:text-[40px] text-[20px] font-bold leading-[120%]'>Precision. Trust. Verified.</p>
-             <p className='md:text-[24px] text-base text-[#808080] font-medium leading-[150%] text-center'>At Corseco Tech, we’re redefining global shipment verification with the power of artificial intelligence. Our mission is simple: eliminate guesswork
+             <p className='md:text-[24px] text-base text-[#808080] font-medium leading-[150%] text-center'>At Corseco.tech, we're redefining global shipment verification with the power of artificial intelligence. Our mission is simple: eliminate guesswork
                  from quality control and replace it with instant, automated proof. In a world where speed, integrity, and traceability matter more than ever, 
                 Corseco Tech delivers AI-driven solutions that ensure your shipments meet the highest standards—every time.</p>
      </div>
@@ -122,15 +118,26 @@ const AboutUs = () => {
        <div className=' flex lg:flex-row flex-col gap-10 justify-between '>
           <div className='flex flex-col order-2 lg:order-1 gap-4 max-w-[588px] lg:mx-0 mx-auto'>
             <p className='md:text-[40px] text-[24px] font-bold leading-[150%]'>Meet the Innovators</p>
-            <p className='text-[#808080] md:text-base text-sm leading-[150%] '>Result-driven, customer-focused, analytical and articulate Senior Product/Project Manager with ~13 years 
-                of experience in Product & Program Management for product delivery on B2B and B2C Platform, Process Consulting Ai/ML computer vision, Specialist in Agile Methodology, 
-                Quality Management, Category Management and P&L Management. Previously worked with JIO Embibe as a Strategic Program Manager in CEO,s Office for translating complex customer 
-                needs into requirements to deliver features that provide competitive differentiation to the product, Skills - Product Management, Omni channel retail, E-commerce SaaS, 
-                Problem Solving, User Stories, Product Roadmap, JIRA, User Experience, Design Thinking, Consumer Behaviour, Wire framing, Product Launch, Competitive Analysis, Product 
-                Planning, Data Analytics, Agile Methodology , Expert in end-to-end product offerings, Product management, (Computer Vision, Deep Learning, Data science , Supply Chain,
-                 Omni channel Retail, Big data, hadoop Ai/ML, Python, web development and advanced analytics). Co-founded Veda labs, Developed a computer vision platform for Enterprise's 
-                 space in retail space as an AI platform which offers deep insights powered by computer vision and machine learning that allows the business owner to extract 
-                 deep insights from any form of video.</p>
+            <p className='text-[#808080] md:text-base text-sm leading-[150%] '>
+                <strong>Vivek Pratap Singh</strong> - Founder & CEO with 14+ years in global trade & analytics
+            </p>
+            <div className='mt-2 space-y-3'>
+                <p className='text-[#808080] md:text-base text-sm leading-[150%]'>
+                    <strong>Previous Experience:</strong> Jio Embibe (Founder Office), Analytics Vidya (Head of Business Development), Trafigura (Senior Product Manager)
+                </p>
+                <p className='text-[#808080] md:text-base text-sm leading-[150%]'>
+                    <strong>Key Achievements:</strong>
+                </p>
+                <ul className='text-[#808080] md:text-base text-sm leading-[150%] ml-4 space-y-1'>
+                    <li>• 2x successful startup exits (Vedalabs & Agrex AI)</li>
+                    <li>• Led product strategy for 20M+ students and 400+ institutional clients at Jio Embibe</li>
+                    <li>• Built Lykos - World's first Just-In-Time supply chain for metals (500-700 tonnes monthly, $300-500M value)</li>
+                    
+                </ul>
+                <p className='text-[#808080] md:text-base text-sm leading-[150%]'>
+                    <strong>Expertise:</strong> Product Management, AI/ML, Computer Vision, Supply Chain Analytics, B2B SaaS Platforms
+                </p>
+            </div>
           </div>
             <div className='flex  flex-col gap-4 order-1 lg:order-2'>
                <div className='w-fit mx-auto md:p-5 p-2 rounded-[24px] bg-white border-[4px] border-[#F5F5F5]'>
