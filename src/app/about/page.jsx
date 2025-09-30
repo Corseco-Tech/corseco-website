@@ -7,7 +7,7 @@ const data=[
     {
         id:1,
         name:" Jorlin Rafarero",
-        designation:"Partner at Corseco",
+        designation:"Partner at Corseco.tech | Investor",
         image:"/team/jorlin-rafaero.jpg"
     },
     {
