@@ -7,7 +7,7 @@ const Testimonials = () => {
       name: 'Jitendra Shrivastava',
       role: 'Founder',
       company: 'Bluewaterworks',
-      content: 'Corseco has revolutionized our quality control process. The AI-powered detection is incredibly accurate and saves us hours every day.',
+      content: 'Document verification has never been this seamless. Corseco ensures we stay compliant effortlessly.',
       rating: 5,
       avatar: '/team/jitendra.jpg'
     },
@@ -20,12 +20,12 @@ const Testimonials = () => {
       avatar: '/team/siddartha.jpeg'
     },
     {
-      name:" Jorlin Rafarero",
+      name:"Raj Menon",
       role: 'Founder',
-      company: 'Royal LePage Signature Realty',
-      content: 'Document verification has never been this seamless. Corseco ensures we stay compliant effortlessly.',
+      company: 'Emco Ceremica India',
+      content: 'Corseco has revolutionized our quality control process. The AI-powered detection is incredibly accurate and saves us hours every day.',
       rating: 5,
-      avatar: '/team/jorlin-rafaero.jpg'
+      avatar: '/team/profile3.png'
     }
   ];
 
