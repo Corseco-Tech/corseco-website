@@ -7,17 +7,23 @@ const data=[
     {
         id:1,
         name:" Jorlin Rafarero",
-        designation:"Managing Partner at Corseco.tech | Investor",
+        designation:"Managing Partner | Investor",
         image:"/team/jorlin-rafaero.jpg"
     },
     {
         id:2,
+        name:"Ralf Saykiewicz",
+        designation:"Managing Partner",
+        image:"/team/ralf-saykiewicz.jpg"
+    },
+    {
+        id:3,
         name:"Spondon Dey",
         designation:"Chief Strategy Officer",
         image:"/team/spondon.png"
     },
     {
-        id:3,
+        id:4,
         name:"Sachin Dubeydi",
         designation:"CFO",
         image:"/team/sachin.png"
