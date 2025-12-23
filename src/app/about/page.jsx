@@ -155,10 +155,10 @@ const AboutUs = () => {
                 </div> 
             </div>
        </div>
-       <div className='flex flex-wrap justify-center items-center gap-10'>
+       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 justify-items-center'>
             {
                 data.map((item)=>(
-                    <div key={item.id} className='flex flex-col gap-1 justify-center pb-2 border border-[#808080] rounded-[16px] w-[280px] md:w-[344px] h-[400px]'>
+                    <div key={item.id} className='flex flex-col gap-1 justify-center pb-2 border border-[#808080] rounded-[16px] w-full max-w-[320px] h-[420px]'>
                         <div className='w-full h-[250px] overflow-hidden'><Image src={item.image} alt={item.name} width={384} height={250} responsive="true" className='rounded-[14px] w-full h-full object-contain' /></div>
                        <div className='flex flex-col gap-1 justify-center items-start px-5 flex-grow'>
                         <p className='text-[24px] font-bold leading-[150%]'>{item.name}</p>
