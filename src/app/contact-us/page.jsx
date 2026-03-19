@@ -1,7 +1,7 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import React from 'react'
-import { Mail, Phone } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
 const Contactus = () => {
   return (
@@ -35,7 +35,18 @@ const Contactus = () => {
         </div>
 
         {/* Contact Methods */}
-        <div className='grid md:grid-cols-2 gap-8'>
+        <div className='grid md:grid-cols-3 gap-8'>
+          {/* Address */}
+          <div className='bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center'>
+            <div className='w-16 h-16 bg-gray-800 rounded-xl flex items-center justify-center mx-auto mb-6'>
+              <MapPin className='w-8 h-8 text-white' />
+            </div>
+            <h3 className='text-xl font-semibold text-gray-900 mb-4'>Address</h3>
+            <p className='text-lg text-gray-600 font-medium'>
+              337 Churchill Road,<br />Pittsburgh, PA 95135
+            </p>
+          </div>
+
           {/* Email Contact */}
           <div className='bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center'>
             <div className='w-16 h-16 bg-gray-800 rounded-xl flex items-center justify-center mx-auto mb-6'>

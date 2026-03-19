@@ -47,7 +47,7 @@ const Footer = () => {
                     <p  className='text-[16px]  leading-[150%] '>+91-98180 04499</p>
                     <p className='text-[16px]  leading-[150%] '>+1 705-3337229</p>
                    <a href="mailto:vivek@corseco.tech"> <p className='text-[16px]  leading-[150%] '>vivek@corseco.tech</p></a>
-
+                    <p className='text-[16px]  leading-[150%] '>337 Churchill Road, Pittsburgh, PA 95135</p>
                 </div>
             </div>
             <div className='pt-6 border-t flex md:flex-row flex-col gap-10 items-center justify-between border-t-[#808080]'>

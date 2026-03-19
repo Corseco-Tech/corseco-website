@@ -18,27 +18,33 @@ const data=[
     },
     {
         id:3,
-        name:"Spondon Dey",
-        designation:"Chief Strategy Officer",
-        image:"/team/spondon.png"
-    },
-    {
-        id:4,
         name:"Sachin Dubeydi",
         designation:"CFO",
         image:"/team/sachin.png"
     },
 
     
-    // {
-    //     id:4,
-    //     name:"Kayode Bamidele",
-    //     designation:"Product Designer",
-    //     image:"/team/kayode.png"
-    // },
-    
+    {
+        id:5,
+        name:"Abubakar Adeyemi",
+        designation:"Partner | Advisor",
+        image:"/team/abubakar.jpeg"
+    },
+    {
+        id:6,
+        name:"Saksham Goyal",
+        designation:"Core Contributor",
+        image:"/team/saksham.jpeg"
+    },
+
 ]
 const boardofadvisors=[
+    {
+        id:1,
+        name:"Spondon Dey",
+        designation:"Chief Innovation Officer, AT&T",
+        image:"/team/spondon.png"
+    },
     {
         id:2,
         name:"Jitendra Srivastava",
@@ -155,15 +161,15 @@ const AboutUs = () => {
                 </div> 
             </div>
        </div>
-       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 justify-items-center'>
+       <div className='grid grid-cols-2 lg:grid-cols-5 gap-4 justify-items-center'>
             {
                 data.map((item)=>(
-                    <div key={item.id} className='flex flex-col gap-1 justify-center pb-2 border border-[#808080] rounded-[16px] w-full max-w-[320px] h-[420px]'>
-                        <div className='w-full h-[250px] overflow-hidden'><Image src={item.image} alt={item.name} width={384} height={250} responsive="true" className='rounded-[14px] w-full h-full object-contain' /></div>
-                       <div className='flex flex-col gap-1 justify-center items-start px-5 flex-grow'>
-                        <p className='text-[24px] font-bold leading-[150%]'>{item.name}</p>
-                        <p className='text-[#808080] leading-[150%]'>{item.designation}</p>
-                        </div> 
+                    <div key={item.id} className='flex flex-col border border-[#808080] rounded-[16px] w-full max-w-[280px] overflow-hidden'>
+                        <div className='w-full h-[250px] flex items-center justify-center bg-white'><Image src={item.image} alt={item.name} width={280} height={250} responsive="true" className='w-full h-full object-contain' /></div>
+                       <div className='flex flex-col gap-1 items-start px-4 py-3'>
+                        <p className='text-xl font-bold leading-[140%]'>{item.name}</p>
+                        <p className='text-[#808080] text-sm leading-[150%]'>{item.designation}</p>
+                        </div>
                     </div>
                 ))
             }
@@ -172,16 +178,16 @@ const AboutUs = () => {
        <div className='flex flex-col gap-10'>
         <p className='md:text-[40px] text-[28px] font-bold text-center leading-[120%]'>Board of Advisors</p>
      <Marquee speed={50} gradient={false} pauseOnHover={true}>
-        <div className='flex  items-center gap-10 overflow-x-auto scrollbar-hide  pl-5 mr-5' >
-{        
+        <div className='flex  items-center gap-4 overflow-x-auto scrollbar-hide  pl-5 mr-5' >
+{
                 boardofadvisors.map((item)=>(
-                    <div key={item.id} className='flex flex-col gap-6   pb-7 border border-[#808080] rounded-[16px] shrink-0  md:w-[398px] self-stretch  w-[200px] '>
-                        <div className='w-full   max-h-[140px] md:min-h-[287px]  min-h-[140px]'>
-                            <Image src={item.image} alt={item.name} width={398} height={398} responsive="true" className='rounded-[14px] w-full h-full  object-scale-down' /></div>
-                       <div className='flex flex-col gap-2  items-start h-full px-5'>
-                        <p className='md:text-[24px] text-base font-bold leading-[150%] '>{item.name}</p>
-                        <p className='text-[#808080] md:text-base text-xs leading-[150%] '>{item.designation}</p>
-                        </div> 
+                    <div key={item.id} className='flex flex-col border border-[#808080] rounded-[16px] shrink-0 md:w-[280px] w-[180px] overflow-hidden'>
+                        <div className='w-full md:h-[220px] h-[120px] flex items-center justify-center bg-white'>
+                            <Image src={item.image} alt={item.name} width={280} height={280} responsive="true" className='w-full h-full object-contain' /></div>
+                       <div className='flex flex-col gap-2 items-start px-4 py-3'>
+                        <p className='md:text-lg text-sm font-bold leading-[150%]'>{item.name}</p>
+                        <p className='text-[#808080] md:text-sm text-xs leading-[150%]'>{item.designation}</p>
+                        </div>
                     </div>
                 ))
             }
